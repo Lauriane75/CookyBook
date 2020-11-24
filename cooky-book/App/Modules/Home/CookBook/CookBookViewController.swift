@@ -47,6 +47,7 @@ class CookBookViewController: UIViewController {
         self.collectionView.reloadData()
 
         bind(to: viewModel)
+        bind(to: collectionDataSource)
 
         viewModel.viewDidLoad()
     }

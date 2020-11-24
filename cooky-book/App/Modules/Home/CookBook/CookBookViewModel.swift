@@ -62,7 +62,7 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
     }
 
     func didSelectRecipe(at index: Int) {
-        print("open recipe view")
+        print("open recipe view number \(index)")
         self.delegate?.didSelectRecipe()
     }
 
