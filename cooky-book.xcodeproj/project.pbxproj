@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F61E64AB256D442800732A68 /* RecipeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61E64AA256D442800732A68 /* RecipeDetailViewModel.swift */; };
+		F61E64AD256D443500732A68 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61E64AC256D443500732A68 /* RecipeDetailViewController.swift */; };
 		F6B0488B25699D6D0094EDA2 /* CookBookCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B0488A25699D6D0094EDA2 /* CookBookCollectionDataSource.swift */; };
 		F6B0488D25699DB50094EDA2 /* CookBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B0488C25699DB50094EDA2 /* CookBookCollectionViewCell.swift */; };
 		F6F937932566D38D00597303 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F937922566D38D00597303 /* AppDelegate.swift */; };
@@ -48,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F61E64AA256D442800732A68 /* RecipeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewModel.swift; sourceTree = "<group>"; };
+		F61E64AC256D443500732A68 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
 		F6B0488A25699D6D0094EDA2 /* CookBookCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookBookCollectionDataSource.swift; sourceTree = "<group>"; };
 		F6B0488C25699DB50094EDA2 /* CookBookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookBookCollectionViewCell.swift; sourceTree = "<group>"; };
 		F6F9378F2566D38D00597303 /* cooky-book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cooky-book.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +104,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F61E64A9256D440C00732A68 /* RecipeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F61E64AC256D443500732A68 /* RecipeDetailViewController.swift */,
+				F61E64AA256D442800732A68 /* RecipeDetailViewModel.swift */,
+			);
+			path = RecipeDetail;
+			sourceTree = "<group>";
+		};
 		F6F937862566D38D00597303 = {
 			isa = PBXGroup;
 			children = (
@@ -195,7 +208,8 @@
 			isa = PBXGroup;
 			children = (
 				F6F937D12567CE1900597303 /* Home */,
-				F6F937DA2567D01400597303 /* CookBook */,
+				F6F937DA2567D01400597303 /* Cook Book */,
+				F61E64A9256D440C00732A68 /* RecipeDetail */,
 				F6F937D22567CE1F00597303 /* CookBook */,
 			);
 			path = Modules;
@@ -244,7 +258,7 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
-		F6F937DA2567D01400597303 /* CookBook */ = {
+		F6F937DA2567D01400597303 /* Cook Book */ = {
 			isa = PBXGroup;
 			children = (
 				F6F937E02567D0BA00597303 /* CookBookViewController.swift */,
@@ -252,8 +266,8 @@
 				F6F937DB2567D02A00597303 /* Repository */,
 				F6F937DD2567D03F00597303 /* Model */,
 			);
-			name = CookBook;
-			path = Home/CookBook;
+			name = "Cook Book";
+			path = "Home/Cook Book";
 			sourceTree = "<group>";
 		};
 		F6F937DB2567D02A00597303 /* Repository */ = {
@@ -410,7 +424,9 @@
 				F6F937B92567BF1A00597303 /* Context.swift in Sources */,
 				F6F937E12567D0BA00597303 /* CookBookViewController.swift in Sources */,
 				F6F937B72567BEB100597303 /* CoreDataStack.swift in Sources */,
+				F61E64AB256D442800732A68 /* RecipeDetailViewModel.swift in Sources */,
 				F6F937C12567BFC600597303 /* Token.swift in Sources */,
+				F61E64AD256D443500732A68 /* RecipeDetailViewController.swift in Sources */,
 				F6F937FA256810D300597303 /* HomeCollectionViewCell.swift in Sources */,
 				F6F937D62567CF0200597303 /* HomeViewModel.swift in Sources */,
 				F6F937E52567D4D100597303 /* TabBarCoordinator.swift in Sources */,

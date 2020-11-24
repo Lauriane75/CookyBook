@@ -26,7 +26,7 @@ final class CookBookCoordinator {
     }
 }
 
-    // MARK: - CoordinatorProtocol
+// MARK: - CoordinatorProtocol
 
 extension CookBookCoordinator: CoordinatorProtocol {
 
@@ -43,10 +43,21 @@ extension CookBookCoordinator: CoordinatorProtocol {
         let alert = screens.createAlertView(for: type)
         navigationController.visibleViewController?.present(alert, animated: true, completion: nil)
     }
+
+    private func showRecipeDetailView() {
+        let viewController = screens.createRecipeDetailViewController(delegate: self)
+        navigationController.pushViewController(viewController, animated: true)
+    }
 }
 
 extension CookBookCoordinator: CookBookViewModelDelegate {
     func didSelectRecipe() {
+        showRecipeDetailView()
+    }
+}
 
+extension CookBookCoordinator: RecipeDetailViewModelDelegate {
+    func displayAlert(for type: AlertType) {
+        showAlert(for: .errorService)
     }
 }

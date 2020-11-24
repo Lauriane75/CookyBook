@@ -383,6 +383,21 @@
             </objects>
             <point key="canvasLocation" x="963.76811594202911" y="138.61607142857142"/>
         </scene>
+        <!--Recipe Detail View Controller-->
+        <scene sceneID="dIv-mQ-Rkh">
+            <objects>
+                <viewController storyboardIdentifier="RecipeDetailViewController" id="wbU-Ph-uCs" customClass="RecipeDetailViewController" customModule="cooky_book" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AFU-LS-CcJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="YGi-3o-j9F"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lk8-wt-wBy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1630" y="105"/>
+        </scene>
     </scenes>
     <resources>
         <image name="heart.fill" catalog="system" width="64" height="54"/>
