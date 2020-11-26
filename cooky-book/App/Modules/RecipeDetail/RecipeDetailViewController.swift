@@ -12,6 +12,21 @@ class RecipeDetailViewController: UIViewController {
 
     // MARK: - Outlets
 
+    @IBOutlet weak var userProfilImageView: UIImageView!
+    @IBOutlet weak var recipeNameLabel: UILabel!
+    @IBOutlet weak var nameUserLabel: UILabel!
+    @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var recipeImageView: UIImageView!
+    @IBOutlet weak var hearButton: UIButton!
+    @IBOutlet weak var thumbUpButton: UIButton!
+    @IBOutlet weak var numberOfLikeLabel: UILabel!
+    @IBOutlet weak var numberOfPeopleWhoDidThis: UILabel!
+    @IBOutlet weak var ingredientTableView: UITableView!
+    @IBOutlet weak var stepsLabel: UILabel!
+    @IBOutlet weak var stepsTextView: UITextView!
+
+    // MARK: - Properties
+
     var viewModel: RecipeDetailViewModel!
 
     // MARK: - View life cycle
@@ -27,4 +42,15 @@ class RecipeDetailViewController: UIViewController {
 
     // MARK: - View actions
 
+    @IBAction func didPressEditButton(_ sender: Any) {
+        print("didPressEditButton")
+    }
+
+    @IBAction func didPressHeartButton(_ sender: Any) {
+        print("didPressHeartButton")
+    }
+
+    @IBAction func didPressThumbUpButton(_ sender: Any) {
+        print("didPressHeartButton")
+    }
 }
