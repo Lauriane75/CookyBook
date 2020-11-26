@@ -397,6 +397,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XMb-KQ-jAH" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                                         <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bDB-iJ-Xoo" userLabel="User Profil Image View">
+                                                <rect key="frame" x="20" y="30" width="35" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="mLU-Ek-kzU"/>
+                                                    <constraint firstAttribute="width" constant="35" id="siB-hJ-Gdw"/>
+                                                </constraints>
+                                            </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pFR-23-aT5">
                                                 <rect key="frame" x="85" y="30" width="264" height="46.5"/>
                                                 <subviews>
@@ -422,6 +429,9 @@
                                                 </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="pencil" catalog="system"/>
+                                                <connections>
+                                                    <action selector="didPressEditButton:" destination="wbU-Ph-uCs" eventType="touchUpInside" id="CcQ-lV-HJO"/>
+                                                </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cake" translatesAutoresizingMaskIntoConstraints="NO" id="gzL-r4-nTg">
                                                 <rect key="frame" x="0.0" y="96.5" width="414" height="346"/>
@@ -436,11 +446,17 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="20.5" height="22"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="heart" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="didPressHeartButton:" destination="wbU-Ph-uCs" eventType="touchUpInside" id="68c-wV-5aI"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abq-3Z-rqP">
                                                         <rect key="frame" x="35.5" y="0.0" width="21" height="22"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="hand.thumbsup" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="didPressThumbUpButton:" destination="wbU-Ph-uCs" eventType="touchUpInside" id="8Ra-6d-pGD"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -476,13 +492,6 @@
                                                     </tableViewCell>
                                                 </prototypes>
                                             </tableView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bDB-iJ-Xoo">
-                                                <rect key="frame" x="20" y="30" width="35" height="35"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="mLU-Ek-kzU"/>
-                                                    <constraint firstAttribute="width" constant="35" id="siB-hJ-Gdw"/>
-                                                </constraints>
-                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqg-QM-Lta">
                                                 <rect key="frame" x="10" y="752.5" width="394" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -548,6 +557,20 @@
                         <viewLayoutGuide key="safeArea" id="YGi-3o-j9F"/>
                     </view>
                     <size key="freeformSize" width="414" height="1200"/>
+                    <connections>
+                        <outlet property="editButton" destination="j2G-NV-br2" id="dSY-91-7Ur"/>
+                        <outlet property="hearButton" destination="WCX-Kv-vV1" id="C2M-ZW-FQv"/>
+                        <outlet property="ingredientTableView" destination="LwN-Ez-3mG" id="b3p-vV-2w2"/>
+                        <outlet property="nameUserLabel" destination="S3l-vz-hU7" id="ahv-ad-Jzd"/>
+                        <outlet property="numberOfLikeLabel" destination="eyd-Cv-2lb" id="i3F-Ti-0XD"/>
+                        <outlet property="numberOfPeopleWhoDidThis" destination="c7N-hD-nBU" id="Xcz-IP-ery"/>
+                        <outlet property="recipeImageView" destination="gzL-r4-nTg" id="YHk-Kj-O89"/>
+                        <outlet property="recipeNameLabel" destination="pt5-A8-J5E" id="9uI-JB-VYH"/>
+                        <outlet property="stepsLabel" destination="lqg-QM-Lta" id="RgX-Kx-W5O"/>
+                        <outlet property="stepsTextView" destination="J9L-Qd-gWS" id="Xpi-2v-3zf"/>
+                        <outlet property="thumbUpButton" destination="abq-3Z-rqP" id="GL8-3D-qiL"/>
+                        <outlet property="userProfilImageView" destination="bDB-iJ-Xoo" id="eM7-GZ-GW8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lk8-wt-wBy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
