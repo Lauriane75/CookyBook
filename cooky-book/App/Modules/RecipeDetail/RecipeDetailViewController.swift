@@ -29,11 +29,22 @@ class RecipeDetailViewController: UIViewController {
 
     var viewModel: RecipeDetailViewModel!
 
-    // MARK: - View life cycle
+    private var ingredientDataSource = IngredientTableViewDataSource()
 
+    // MARK: - View life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        viewModel.viewDidLoad()
+
+        ingredientTableView.delegate = ingredientDataSource
+        ingredientTableView.dataSource = ingredientDataSource
+
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        viewModel.viewDidAppear()
 
     }
 

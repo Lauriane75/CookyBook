@@ -58,6 +58,12 @@ class HomeViewController: UIViewController {
 
     // MARK: - View actions
 
+    @IBAction func didPressMessageButton(_ sender: Any) {
+    }
+    
+    @IBAction func didPressHeartButton(_ sender: Any) {
+    }
+    
     // MARK: - Private Files
 
 
