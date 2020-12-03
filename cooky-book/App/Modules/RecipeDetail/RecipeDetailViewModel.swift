@@ -41,4 +41,11 @@ final class RecipeDetailViewModel {
 
     func viewDidLoad() {
     }
+
+    func viewDidAppear() {
+        
+    }
+
+
+    
 }
