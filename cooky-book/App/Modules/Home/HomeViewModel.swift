@@ -20,14 +20,11 @@ final class HomeViewModel {
 
     private weak var delegate: HomeViewModelDelegate?
 
-//    private var userItem: UserItem
-
     // MARK: - Initializer
 
     init(repository: AuthRepositoryType, delegate: HomeViewModelDelegate?) {
         self.repository = repository
         self.delegate = delegate
-//        self.userItem = userItem
     }
 
     // MARK: - Output

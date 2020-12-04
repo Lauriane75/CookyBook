@@ -43,7 +43,7 @@ extension Screens {
             "SignupViewController") as! SignupViewController
         let repository = AuthRepository(context: context)
         let viewModel = SignupViewModel(repository: repository,
-                                       delegate: delegate)
+                                        delegate: delegate)
         viewController.viewModel = viewModel
         return viewController
     }
@@ -90,7 +90,6 @@ extension Screens {
         return viewController
     }
 }
-
 
 // MARK: - Alert
 

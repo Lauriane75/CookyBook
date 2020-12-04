@@ -10,7 +10,7 @@ import Foundation
 
 protocol LoginViewModelDelegate: class {
     func goToSignupScreen()
-    func goToHomeScreen(userItem: UserItem)
+    func goToHomeScreen()
 }
 
 final class LoginViewModel {
@@ -51,8 +51,7 @@ final class LoginViewModel {
     }
 
     func didPressLoginButton(email: String, password: String) {
-        let userItem = UserItem(uid: "1", firstName: "test", lastName: "test", password: "test")
-        self.delegate?.goToHomeScreen(userItem: userItem)
+        self.delegate?.goToHomeScreen()
     }
 }
 
