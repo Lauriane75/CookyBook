@@ -11,10 +11,8 @@ import Foundation
 final class Context {
 
     let client: HTTPClientType
-    let stack: CoreDataStack
 
-    init(client: HTTPClientType, stack: CoreDataStack) {
+    init(client: HTTPClientType) {
         self.client = client
-        self.stack = stack
     }
 }

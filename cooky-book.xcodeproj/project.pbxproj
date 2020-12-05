@@ -7,13 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F61E64AB256D442800732A68 /* RecipeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61E64AA256D442800732A68 /* RecipeDetailViewModel.swift */; };
+		F61E64AD256D443500732A68 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61E64AC256D443500732A68 /* RecipeDetailViewController.swift */; };
 		F6B0488B25699D6D0094EDA2 /* CookBookCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B0488A25699D6D0094EDA2 /* CookBookCollectionDataSource.swift */; };
 		F6B0488D25699DB50094EDA2 /* CookBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B0488C25699DB50094EDA2 /* CookBookCollectionViewCell.swift */; };
+		F6D73FD925795575006600F2 /* MessageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D73FD825795575006600F2 /* MessageCoordinator.swift */; };
+		F6D73FDB25795645006600F2 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D73FDA25795645006600F2 /* LoginCoordinator.swift */; };
+		F6D73FDD2579564E006600F2 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D73FDC2579564E006600F2 /* SignUpCoordinator.swift */; };
+		F6D73FE1257956A5006600F2 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D73FE0257956A5006600F2 /* SignupViewController.swift */; };
+		F6D73FE52579576E006600F2 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D73FE42579576E006600F2 /* SignupViewModel.swift */; };
+		F6D73FE72579577A006600F2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D73FE62579577A006600F2 /* LoginViewController.swift */; };
+		F6D73FEA257957E0006600F2 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D73FE9257957E0006600F2 /* MessageViewModel.swift */; };
+		F6D73FEC2579589D006600F2 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D73FEB2579589D006600F2 /* MessageViewController.swift */; };
+		F6D73FEE25795C1F006600F2 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D73FED25795C1F006600F2 /* LoginViewModel.swift */; };
+		F6D73FF025795E87006600F2 /* UserItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D73FEF25795E87006600F2 /* UserItem.swift */; };
+		F6D73FF225795FF1006600F2 /* AuthentificationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D73FF125795FF1006600F2 /* AuthentificationCoordinator.swift */; };
+		F6D73FF625796413006600F2 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D73FF425796412006600F2 /* Utilities.swift */; };
+		F6D73FF725796413006600F2 /* Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D73FF525796412006600F2 /* Custom.swift */; };
+		F6D73FFA257AB24B006600F2 /* LikesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D73FF9257AB24B006600F2 /* LikesViewModel.swift */; };
+		F6D73FFC257AB2A3006600F2 /* LikesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D73FFB257AB2A3006600F2 /* LikesViewController.swift */; };
 		F6F937932566D38D00597303 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F937922566D38D00597303 /* AppDelegate.swift */; };
 		F6F937952566D38D00597303 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F937942566D38D00597303 /* HomeViewController.swift */; };
 		F6F9379B2566D38D00597303 /* cooky_book.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F6F937992566D38D00597303 /* cooky_book.xcdatamodeld */; };
 		F6F937AB2566D39200597303 /* cooky_bookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F937AA2566D39200597303 /* cooky_bookTests.swift */; };
-		F6F937B72567BEB100597303 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F937B62567BEB100597303 /* CoreDataStack.swift */; };
 		F6F937B92567BF1A00597303 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F937B82567BF1A00597303 /* Context.swift */; };
 		F6F937BD2567BF8A00597303 /* HTTPEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F937BC2567BF8A00597303 /* HTTPEngine.swift */; };
 		F6F937BF2567BFAA00597303 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F937BE2567BFAA00597303 /* HTTPClient.swift */; };
@@ -25,7 +41,7 @@
 		F6F937CC2567CCD400597303 /* CookBookCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F937CB2567CCD400597303 /* CookBookCoordinator.swift */; };
 		F6F937CF2567CDE900597303 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F937CE2567CDE900597303 /* Alert.swift */; };
 		F6F937D62567CF0200597303 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F937D52567CF0200597303 /* HomeViewModel.swift */; };
-		F6F937D92567CFC800597303 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F937D82567CFC800597303 /* HomeRepository.swift */; };
+		F6F937D92567CFC800597303 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F937D82567CFC800597303 /* AuthRepository.swift */; };
 		F6F937DF2567D05800597303 /* CookBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F937DE2567D05800597303 /* CookBookViewModel.swift */; };
 		F6F937E12567D0BA00597303 /* CookBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F937E02567D0BA00597303 /* CookBookViewController.swift */; };
 		F6F937E32567D0F100597303 /* CookBookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F937E22567D0F100597303 /* CookBookRepository.swift */; };
@@ -35,6 +51,8 @@
 		F6F937EC2567ECFA00597303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6F937EB2567ECFA00597303 /* Assets.xcassets */; };
 		F6F937F82568105900597303 /* HomeCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F937F72568105900597303 /* HomeCollectionDataSource.swift */; };
 		F6F937FA256810D300597303 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F937F9256810D300597303 /* HomeCollectionViewCell.swift */; };
+		F6FC7547257038CB00A763B8 /* IngredientTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FC7546257038CB00A763B8 /* IngredientTableViewDataSource.swift */; };
+		F6FC7549257039B500A763B8 /* IngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FC7548257039B500A763B8 /* IngredientTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +66,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F61E64AA256D442800732A68 /* RecipeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewModel.swift; sourceTree = "<group>"; };
+		F61E64AC256D443500732A68 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
 		F6B0488A25699D6D0094EDA2 /* CookBookCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookBookCollectionDataSource.swift; sourceTree = "<group>"; };
 		F6B0488C25699DB50094EDA2 /* CookBookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookBookCollectionViewCell.swift; sourceTree = "<group>"; };
+		F6D73FD825795575006600F2 /* MessageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCoordinator.swift; sourceTree = "<group>"; };
+		F6D73FDA25795645006600F2 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		F6D73FDC2579564E006600F2 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
+		F6D73FE0257956A5006600F2 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		F6D73FE42579576E006600F2 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		F6D73FE62579577A006600F2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F6D73FE9257957E0006600F2 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
+		F6D73FEB2579589D006600F2 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		F6D73FED25795C1F006600F2 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		F6D73FEF25795E87006600F2 /* UserItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserItem.swift; path = "cooky-book/App/Modules/Authentification/Login/UserItem.swift"; sourceTree = SOURCE_ROOT; };
+		F6D73FF125795FF1006600F2 /* AuthentificationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthentificationCoordinator.swift; sourceTree = "<group>"; };
+		F6D73FF425796412006600F2 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		F6D73FF525796412006600F2 /* Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Custom.swift; sourceTree = "<group>"; };
+		F6D73FF9257AB24B006600F2 /* LikesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesViewModel.swift; sourceTree = "<group>"; };
+		F6D73FFB257AB2A3006600F2 /* LikesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesViewController.swift; sourceTree = "<group>"; };
 		F6F9378F2566D38D00597303 /* cooky-book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cooky-book.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6F937922566D38D00597303 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6F937942566D38D00597303 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +92,6 @@
 		F6F937A62566D39200597303 /* cooky-bookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cooky-bookTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6F937AA2566D39200597303 /* cooky_bookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cooky_bookTests.swift; sourceTree = "<group>"; };
 		F6F937AC2566D39200597303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F6F937B62567BEB100597303 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		F6F937B82567BF1A00597303 /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
 		F6F937BC2567BF8A00597303 /* HTTPEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPEngine.swift; sourceTree = "<group>"; };
 		F6F937BE2567BFAA00597303 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
@@ -69,7 +103,7 @@
 		F6F937CB2567CCD400597303 /* CookBookCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookBookCoordinator.swift; sourceTree = "<group>"; };
 		F6F937CE2567CDE900597303 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		F6F937D52567CF0200597303 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		F6F937D82567CFC800597303 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
+		F6F937D82567CFC800597303 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		F6F937DE2567D05800597303 /* CookBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookBookViewModel.swift; sourceTree = "<group>"; };
 		F6F937E02567D0BA00597303 /* CookBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookBookViewController.swift; sourceTree = "<group>"; };
 		F6F937E22567D0F100597303 /* CookBookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookBookRepository.swift; sourceTree = "<group>"; };
@@ -80,6 +114,8 @@
 		F6F937F32567F53400597303 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6F937F72568105900597303 /* HomeCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionDataSource.swift; sourceTree = "<group>"; };
 		F6F937F9256810D300597303 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		F6FC7546257038CB00A763B8 /* IngredientTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableViewDataSource.swift; sourceTree = "<group>"; };
+		F6FC7548257039B500A763B8 /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +136,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F61E64A9256D440C00732A68 /* RecipeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F61E64AC256D443500732A68 /* RecipeDetailViewController.swift */,
+				F61E64AA256D442800732A68 /* RecipeDetailViewModel.swift */,
+				F6FC7545257038A200A763B8 /* Cell */,
+			);
+			path = RecipeDetail;
+			sourceTree = "<group>";
+		};
+		F6D73FDE25795674006600F2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F6D73FE62579577A006600F2 /* LoginViewController.swift */,
+				F6D73FED25795C1F006600F2 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F6D73FDF25795689006600F2 /* Authentification */ = {
+			isa = PBXGroup;
+			children = (
+				F6D73FDE25795674006600F2 /* Login */,
+				F6D73FE2257956A9006600F2 /* Signup */,
+			);
+			path = Authentification;
+			sourceTree = "<group>";
+		};
+		F6D73FE2257956A9006600F2 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				F6D73FE0257956A5006600F2 /* SignupViewController.swift */,
+				F6D73FE42579576E006600F2 /* SignupViewModel.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		F6D73FE8257957C8006600F2 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				F6D73FEB2579589D006600F2 /* MessageViewController.swift */,
+				F6D73FE9257957E0006600F2 /* MessageViewModel.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		F6D73FF325796412006600F2 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				F6D73FF425796412006600F2 /* Utilities.swift */,
+				F6D73FF525796412006600F2 /* Custom.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		F6D73FF8257AB1DC006600F2 /* Likes */ = {
+			isa = PBXGroup;
+			children = (
+				F6D73FFB257AB2A3006600F2 /* LikesViewController.swift */,
+				F6D73FF9257AB24B006600F2 /* LikesViewModel.swift */,
+			);
+			path = Likes;
+			sourceTree = "<group>";
+		};
 		F6F937862566D38D00597303 = {
 			isa = PBXGroup;
 			children = (
@@ -143,7 +243,6 @@
 			children = (
 				F6F937922566D38D00597303 /* AppDelegate.swift */,
 				F6F937B82567BF1A00597303 /* Context.swift */,
-				F6F937B62567BEB100597303 /* CoreDataStack.swift */,
 				F6F937E62567E8E700597303 /* Main.storyboard */,
 				F6F937CD2567CDD000597303 /* Alert */,
 				F6F937C22567BFE200597303 /* Navigation */,
@@ -155,6 +254,7 @@
 		F6F937BA2567BF3600597303 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				F6D73FF325796412006600F2 /* Custom */,
 				F6F937D02567CE0E00597303 /* Modules */,
 			);
 			path = App;
@@ -179,6 +279,10 @@
 				F6F937C72567CA8100597303 /* Screens.swift */,
 				F6F937C92567CC2800597303 /* HomeCoordinator.swift */,
 				F6F937CB2567CCD400597303 /* CookBookCoordinator.swift */,
+				F6D73FD825795575006600F2 /* MessageCoordinator.swift */,
+				F6D73FDA25795645006600F2 /* LoginCoordinator.swift */,
+				F6D73FDC2579564E006600F2 /* SignUpCoordinator.swift */,
+				F6D73FF125795FF1006600F2 /* AuthentificationCoordinator.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -194,9 +298,10 @@
 		F6F937D02567CE0E00597303 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				F6D73FDF25795689006600F2 /* Authentification */,
 				F6F937D12567CE1900597303 /* Home */,
-				F6F937DA2567D01400597303 /* CookBook */,
-				F6F937D22567CE1F00597303 /* CookBook */,
+				F6F937DA2567D01400597303 /* Cook Book */,
+				F61E64A9256D440C00732A68 /* RecipeDetail */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -206,6 +311,8 @@
 			children = (
 				F6F937942566D38D00597303 /* HomeViewController.swift */,
 				F6F937D52567CF0200597303 /* HomeViewModel.swift */,
+				F6D73FF8257AB1DC006600F2 /* Likes */,
+				F6D73FE8257957C8006600F2 /* Message */,
 				F6F937D72567CFB800597303 /* Repository */,
 				F6F937D42567CE8400597303 /* Cell */,
 				F6F937D32567CE6400597303 /* Model */,
@@ -213,16 +320,10 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		F6F937D22567CE1F00597303 /* CookBook */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CookBook;
-			sourceTree = "<group>";
-		};
 		F6F937D32567CE6400597303 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F6D73FEF25795E87006600F2 /* UserItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -239,12 +340,12 @@
 		F6F937D72567CFB800597303 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				F6F937D82567CFC800597303 /* HomeRepository.swift */,
+				F6F937D82567CFC800597303 /* AuthRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
 		};
-		F6F937DA2567D01400597303 /* CookBook */ = {
+		F6F937DA2567D01400597303 /* Cook Book */ = {
 			isa = PBXGroup;
 			children = (
 				F6F937E02567D0BA00597303 /* CookBookViewController.swift */,
@@ -252,8 +353,8 @@
 				F6F937DB2567D02A00597303 /* Repository */,
 				F6F937DD2567D03F00597303 /* Model */,
 			);
-			name = CookBook;
-			path = Home/CookBook;
+			name = "Cook Book";
+			path = "Home/Cook Book";
 			sourceTree = "<group>";
 		};
 		F6F937DB2567D02A00597303 /* Repository */ = {
@@ -289,6 +390,15 @@
 				F6F937EB2567ECFA00597303 /* Assets.xcassets */,
 			);
 			path = Ressources;
+			sourceTree = "<group>";
+		};
+		F6FC7545257038A200A763B8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F6FC7546257038CB00A763B8 /* IngredientTableViewDataSource.swift */,
+				F6FC7548257039B500A763B8 /* IngredientTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,27 +503,45 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6F937952566D38D00597303 /* HomeViewController.swift in Sources */,
+				F6D73FF025795E87006600F2 /* UserItem.swift in Sources */,
 				F6F937DF2567D05800597303 /* CookBookViewModel.swift in Sources */,
 				F6F937932566D38D00597303 /* AppDelegate.swift in Sources */,
 				F6F937CC2567CCD400597303 /* CookBookCoordinator.swift in Sources */,
 				F6F937C62567C08800597303 /* CoordinatorProtocol.swift in Sources */,
+				F6D73FD925795575006600F2 /* MessageCoordinator.swift in Sources */,
 				F6B0488B25699D6D0094EDA2 /* CookBookCollectionDataSource.swift in Sources */,
 				F6F9379B2566D38D00597303 /* cooky_book.xcdatamodeld in Sources */,
+				F6FC7547257038CB00A763B8 /* IngredientTableViewDataSource.swift in Sources */,
+				F6D73FF225795FF1006600F2 /* AuthentificationCoordinator.swift in Sources */,
 				F6F937BF2567BFAA00597303 /* HTTPClient.swift in Sources */,
+				F6D73FEC2579589D006600F2 /* MessageViewController.swift in Sources */,
+				F6D73FE1257956A5006600F2 /* SignupViewController.swift in Sources */,
 				F6F937CF2567CDE900597303 /* Alert.swift in Sources */,
+				F6D73FFA257AB24B006600F2 /* LikesViewModel.swift in Sources */,
 				F6F937CA2567CC2800597303 /* HomeCoordinator.swift in Sources */,
+				F6D73FDB25795645006600F2 /* LoginCoordinator.swift in Sources */,
 				F6B0488D25699DB50094EDA2 /* CookBookCollectionViewCell.swift in Sources */,
 				F6F937E32567D0F100597303 /* CookBookRepository.swift in Sources */,
-				F6F937D92567CFC800597303 /* HomeRepository.swift in Sources */,
+				F6F937D92567CFC800597303 /* AuthRepository.swift in Sources */,
 				F6F937C42567BFF900597303 /* GeneralCoordinator.swift in Sources */,
+				F6D73FDD2579564E006600F2 /* SignUpCoordinator.swift in Sources */,
+				F6D73FFC257AB2A3006600F2 /* LikesViewController.swift in Sources */,
 				F6F937BD2567BF8A00597303 /* HTTPEngine.swift in Sources */,
+				F6FC7549257039B500A763B8 /* IngredientTableViewCell.swift in Sources */,
 				F6F937B92567BF1A00597303 /* Context.swift in Sources */,
 				F6F937E12567D0BA00597303 /* CookBookViewController.swift in Sources */,
-				F6F937B72567BEB100597303 /* CoreDataStack.swift in Sources */,
+				F61E64AB256D442800732A68 /* RecipeDetailViewModel.swift in Sources */,
 				F6F937C12567BFC600597303 /* Token.swift in Sources */,
+				F61E64AD256D443500732A68 /* RecipeDetailViewController.swift in Sources */,
+				F6D73FE52579576E006600F2 /* SignupViewModel.swift in Sources */,
+				F6D73FF625796413006600F2 /* Utilities.swift in Sources */,
+				F6D73FEE25795C1F006600F2 /* LoginViewModel.swift in Sources */,
 				F6F937FA256810D300597303 /* HomeCollectionViewCell.swift in Sources */,
 				F6F937D62567CF0200597303 /* HomeViewModel.swift in Sources */,
+				F6D73FF725796413006600F2 /* Custom.swift in Sources */,
+				F6D73FE72579577A006600F2 /* LoginViewController.swift in Sources */,
 				F6F937E52567D4D100597303 /* TabBarCoordinator.swift in Sources */,
+				F6D73FEA257957E0006600F2 /* MessageViewModel.swift in Sources */,
 				F6F937C82567CA8100597303 /* Screens.swift in Sources */,
 				F6F937F82568105900597303 /* HomeCollectionDataSource.swift in Sources */,
 			);

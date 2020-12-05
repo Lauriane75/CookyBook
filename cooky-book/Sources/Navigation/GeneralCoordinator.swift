@@ -14,18 +14,12 @@ class GeneralCoordinator {
 
     private unowned var appDelegate: AppDelegate
 
-    private let context: Context
-
-    private var screens: Screens
-
     private var tabBarCoordinator: TabBarCoordinator
 
     // MARK: - Initializer
 
-    init(appDelegate: AppDelegate, context: Context, screens: Screens, tabBarCoordinator: TabBarCoordinator) {
+    init(appDelegate: AppDelegate, tabBarCoordinator: TabBarCoordinator) {
         self.appDelegate = appDelegate
-        self.context = context
-        self.screens = screens
         self.tabBarCoordinator = tabBarCoordinator
     }
 }

@@ -9,24 +9,24 @@
 import Foundation
 
 protocol HomeViewModelDelegate: class {
-
+    func goToMessageScreen()
+    func goToLikeScreen()
 }
 
 final class HomeViewModel {
 
     // MARK: - Properties
 
-    private let repository: HomeRepositoryType
+    private let repository: AuthRepositoryType
 
     private weak var delegate: HomeViewModelDelegate?
 
-
     // MARK: - Initializer
 
-    init(repository: HomeRepositoryType, delegate: HomeViewModelDelegate?) {
-          self.repository = repository
-          self.delegate = delegate
-      }
+    init(repository: AuthRepositoryType, delegate: HomeViewModelDelegate?) {
+        self.repository = repository
+        self.delegate = delegate
+    }
 
     // MARK: - Output
 
@@ -36,11 +36,17 @@ final class HomeViewModel {
 
     func viewDidLoad() {
         appNameText?("Cooky Book")
-        print("viewDidLoad Home")
     }
 
     func viewWillAppear() {
-        print("viewWillAppear Home")
+    }
+
+    func didPressMessageButton() {
+        delegate?.goToMessageScreen()
+    }
+
+    func didPressLikeButton() {
+        delegate?.goToLikeScreen()
     }
 
 }

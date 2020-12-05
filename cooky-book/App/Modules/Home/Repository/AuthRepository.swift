@@ -8,11 +8,11 @@
 
 import CoreData
 
-protocol HomeRepositoryType: class {
+protocol AuthRepositoryType: class {
 
 }
 
-final class HomeRepository: HomeRepositoryType {
+final class AuthRepository: AuthRepositoryType {
 
     // MARK: - Properties
 

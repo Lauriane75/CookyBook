@@ -41,6 +41,10 @@ class CookBookCollectionDataSource: NSObject, UICollectionViewDataSource, UIColl
         return cell
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedRecipe?(indexPath.row)
+    }
+
     // MARK: UICollectionViewDelegateFlowLayout
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
