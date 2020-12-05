@@ -18,11 +18,16 @@ class AuthentificationCoordinator {
 
     private var loginCoordinator: LoginCoordinator?
 
+    let tabBarController = UITabBarController()
+
+    private unowned var appDelegate: AppDelegate
+
     // MARK: - Initializer
 
-    init(presenter: UIWindow, context: Context) {
+    init(presenter: UIWindow, context: Context, appDelegate: AppDelegate) {
         self.presenter = presenter
         self.context = context
+        self.appDelegate = appDelegate
     }
 }
 
@@ -44,7 +49,7 @@ extension AuthentificationCoordinator {
     // MARK: - Create viewControllers
 
     private func showLogin() {
-        loginCoordinator = LoginCoordinator(presenter: presenter, context: context)
+        loginCoordinator = LoginCoordinator(presenter: presenter, context: context, appDelegate: appDelegate)
         loginCoordinator?.start()
     }
 }

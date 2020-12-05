@@ -9,7 +9,7 @@
 import Foundation
 
 protocol SignupViewModelDelegate: class {
-    func goToHomeScreen(userItem: UserItem)
+    func goToHomeScreen()
 }
 
 final class SignupViewModel {
@@ -44,8 +44,7 @@ final class SignupViewModel {
     }
 
     func didPressSignupButton(firstName: String, lastName: String, email: String, password: String) {
-        let userItem = UserItem(uid: "XXX", firstName: "test", lastName: "test", password: "test")
-        self.delegate?.goToHomeScreen(userItem: userItem)
+        self.delegate?.goToHomeScreen()
     }
 
     // MARK: - Private Functions

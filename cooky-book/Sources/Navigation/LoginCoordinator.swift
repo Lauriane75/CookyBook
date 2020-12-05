@@ -18,12 +18,18 @@ final class LoginCoordinator {
 
     private let screens: Screens
 
+    var coordinator: GeneralCoordinator?
+
+    private unowned var appDelegate: AppDelegate
+
+
     // MARK: - Initializer
 
-    init(presenter: UIWindow, context: Context) {
+    init(presenter: UIWindow, context: Context, appDelegate: AppDelegate) {
         self.presenter = presenter
         self.screens = Screens(context: context)
-        navigationController = UINavigationController()
+        self.navigationController = UINavigationController()
+        self.appDelegate = appDelegate
     }
 
     // MARK: - Coordinator
@@ -35,7 +41,7 @@ final class LoginCoordinator {
 
     private func showLoginScreen() {
         let viewController = screens.createLoginViewController(delegate: self)
-        navigationController.viewControllers = [viewController]
+        navigationController.pushViewController(viewController, animated: false)
     }
 
     private func showSignupView() {
@@ -43,16 +49,18 @@ final class LoginCoordinator {
         navigationController.pushViewController(viewController, animated: false)
     }
 
-    private func showHomeView(userItem: UserItem) {
-        let viewController = screens.createHomeViewController(delegate: self)
-        navigationController.pushViewController(viewController, animated: false)
+    private func showHomeView() {
+        let tabBarCoordinator = TabBarCoordinator(screens: screens)
+        coordinator = GeneralCoordinator(appDelegate: appDelegate, tabBarCoordinator: tabBarCoordinator)
+        coordinator?.start()
     }
 
 }
 
 extension LoginCoordinator: LoginViewModelDelegate {
-    func goToHomeScreen(userItem: UserItem) {
-        showHomeView(userItem: userItem)
+    
+    func goToHomeScreen() {
+        showHomeView()
     }
 
     func goToSignupScreen() {
@@ -62,10 +70,6 @@ extension LoginCoordinator: LoginViewModelDelegate {
 
 extension LoginCoordinator: SignupViewModelDelegate {
 
-
 }
 
-extension LoginCoordinator: HomeViewModelDelegate {
-
-}
 

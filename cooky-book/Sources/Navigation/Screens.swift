@@ -43,7 +43,7 @@ extension Screens {
             "SignupViewController") as! SignupViewController
         let repository = AuthRepository(context: context)
         let viewModel = SignupViewModel(repository: repository,
-                                       delegate: delegate)
+                                        delegate: delegate)
         viewController.viewModel = viewModel
         return viewController
     }
@@ -57,6 +57,34 @@ extension Screens {
             "HomeViewController") as! HomeViewController
         let repository = AuthRepository(context: context)
         let viewModel = HomeViewModel(repository: repository,
+                                      delegate: delegate)
+        viewController.viewModel = viewModel
+        return viewController
+    }
+}
+
+// MARK: - Message
+
+extension Screens {
+    func createMessageViewController(delegate: MessageViewModelDelegate?) -> UIViewController {
+        let viewController = storyboard.instantiateViewController(withIdentifier:
+            "MessageViewController") as! MessageViewController
+        let repository = AuthRepository(context: context)
+        let viewModel = MessageViewModel(repository: repository,
+                                         delegate: delegate)
+        viewController.viewModel = viewModel
+        return viewController
+    }
+}
+
+// MARK: - Like
+
+extension Screens {
+    func createLikesViewController(delegate: LikesViewModelDelegate?) -> UIViewController {
+        let viewController = storyboard.instantiateViewController(withIdentifier:
+            "LikesViewController") as! LikesViewController
+        let repository = AuthRepository(context: context)
+        let viewModel = LikesViewModel(repository: repository,
                                       delegate: delegate)
         viewController.viewModel = viewModel
         return viewController
@@ -91,7 +119,6 @@ extension Screens {
     }
 }
 
-
 // MARK: - Alert
 
 extension Screens {
@@ -105,3 +132,4 @@ extension Screens {
         return alertViewController
     }
 }
+

@@ -1,29 +1,29 @@
 //
-//  MessageViewModel.swift
+//  LikeViewModel.swift
 //  cooky-book
 //
-//  Created by Lauriane Haydari on 03/12/2020.
+//  Created by Lauriane Haydari on 04/12/2020.
 //  Copyright © 2020 Lauriane Haydari. All rights reserved.
 //
 
 import Foundation
 
-protocol MessageViewModelDelegate: class {
+protocol LikesViewModelDelegate: class {
 
 }
 
-final class MessageViewModel {
+final class LikesViewModel {
 
     // MARK: - Properties
 
     private let repository: AuthRepositoryType
 
-    private weak var delegate: MessageViewModelDelegate?
+    private weak var delegate: LikesViewModelDelegate?
 
 
     // MARK: - Initializer
 
-    init(repository: AuthRepositoryType, delegate: MessageViewModelDelegate?) {
+    init(repository: AuthRepositoryType, delegate: LikesViewModelDelegate?) {
         self.repository = repository
         self.delegate = delegate
     }
@@ -35,7 +35,7 @@ final class MessageViewModel {
     // MARK: - Input
 
     func viewDidLoad() {
-        labelText?("Message screen")
+        labelText?("likes screen")
     }
 
     func viewWillAppear() {

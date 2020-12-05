@@ -29,9 +29,11 @@ class TabBarCoordinator {
 
 extension TabBarCoordinator {
 
+
     func createTabBar(_ tabBarController: UITabBarController) {
-        let homeItem = createNavigationController(withTitle: "Home", image: UIImage(systemName: "house")!)
-        let cookBookItem = createNavigationController(withTitle: "CookBook", image: UIImage(systemName: "book")!)
+        let homeItem = createNavigationController(withTitle: "Home", image: UIImage(systemName: "house")!, selectedImage: UIImage(systemName: "house.fill")!)
+        let cookBookItem = createNavigationController(withTitle: "CookBook", image: UIImage(systemName: "book")!, selectedImage: UIImage(systemName: "book.fill")!)
+
 
         let homeCoordinator = HomeCoordinator(presenter: homeItem, screens: screens)
         coordinators.append(homeCoordinator)
@@ -45,16 +47,17 @@ extension TabBarCoordinator {
         tabBarController.setViewControllers(rootViewControllers, animated: false)
     }
 
-    func createNavigationController(withTitle title: String, image: UIImage) -> UINavigationController {
+    func createNavigationController(withTitle title: String, image: UIImage, selectedImage: UIImage) -> UINavigationController {
         let navController = UINavigationController()
+        tabBarController.tabBar.backgroundImage = UIImage()
+        let tabBar = tabBarController.tabBar
+        tabBar.unselectedItemTintColor = .white
+        tabBar.tintColor = .white
+        tabBar.backgroundColor = .black
+
         navController.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navController.navigationBar.shadowImage = UIImage()
         navController.navigationBar.tintColor = UIColor.white
-
-        UITabBar.appearance().tintColor = .white
-        UITabBar.appearance().barTintColor = UIColor(named: "black")
-
-        navController.tabBarItem = UITabBarItem(title: title, image: image, selectedImage: nil)
+        navController.tabBarItem = UITabBarItem(title: title, image: image, selectedImage: selectedImage)
 
         return navController
     }

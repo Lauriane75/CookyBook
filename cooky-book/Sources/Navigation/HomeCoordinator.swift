@@ -41,6 +41,16 @@ extension HomeCoordinator: CoordinatorProtocol {
         navigationController.pushViewController(viewController, animated: false)
     }
 
+    private func showMessageView() {
+        let viewController = screens.createMessageViewController(delegate: self)
+        navigationController.pushViewController(viewController, animated: true)
+    }
+
+    private func showLikesView() {
+        let viewController = screens.createLikesViewController(delegate: self)
+        navigationController.pushViewController(viewController, animated: true)
+    }
+
     // MARK: - Alert
 
     private func showAlert(for type: AlertType) {
@@ -50,5 +60,19 @@ extension HomeCoordinator: CoordinatorProtocol {
 }
 
 extension HomeCoordinator: HomeViewModelDelegate {
+    func goToMessageScreen() {
+        showMessageView()
+    }
+
+    func goToLikeScreen() {
+        showLikesView()
+    }
+}
+
+extension HomeCoordinator: MessageViewModelDelegate {
+
+}
+
+extension HomeCoordinator: LikesViewModelDelegate {
 
 }

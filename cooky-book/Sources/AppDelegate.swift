@@ -26,32 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         context = Context(client: client)
 
         coordinator = AuthentificationCoordinator(presenter: window!,
-                                         context: context)
+                                                  context: context, appDelegate: self)
         coordinator?.start()
 
         return true
     }
 }
 
-
-//@UIApplicationMain
-//class AppDelegate: UIResponder, UIApplicationDelegate {
-//
-//    var window: UIWindow?
-//    var coordinator: GeneralCoordinator?
-//    var context: Context!
-//
-//    func application(_ application: UIApplication,
-//                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//
-//        let client = HTTPClient()
-//        context = Context(client: client)
-//        let screens = Screens(context: context)
-//        let tabBarCoordinator = TabBarCoordinator(screens: screens)
-//        coordinator = GeneralCoordinator(appDelegate: self,
-//        context: context,
-//        screens: screens, tabBarCoordinator: tabBarCoordinator)
-//        coordinator?.start()
-//        return true
-//    }
-//}
