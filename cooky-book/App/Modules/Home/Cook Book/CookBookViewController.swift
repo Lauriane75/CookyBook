@@ -103,6 +103,16 @@ class CookBookViewController: UIViewController {
 
     // MARK: - View actions
 
+    @IBAction func didPressAddRecipeButton(_ sender: Any) {
+        viewModel.didPressAddRecipeButton()
+    }
+
+    @IBAction func didPressAccount(_ sender: Any) {
+        viewModel.didPressAccount()
+    }
+
     // MARK: - Private Files
+
+
 
 }

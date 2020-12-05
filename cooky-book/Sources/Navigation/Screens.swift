@@ -77,7 +77,7 @@ extension Screens {
     }
 }
 
-// MARK: - Like
+// MARK: - Likes
 
 extension Screens {
     func createLikesViewController(delegate: LikesViewModelDelegate?) -> UIViewController {
@@ -85,7 +85,7 @@ extension Screens {
             "LikesViewController") as! LikesViewController
         let repository = AuthRepository(context: context)
         let viewModel = LikesViewModel(repository: repository,
-                                      delegate: delegate)
+                                       delegate: delegate)
         viewController.viewModel = viewModel
         return viewController
     }
@@ -100,6 +100,34 @@ extension Screens {
         let repository = CookBookRepository(context: context)
         let viewModel = CookBookViewModel(repository: repository,
                                           delegate: delegate)
+        viewController.viewModel = viewModel
+        return viewController
+    }
+}
+
+// MARK: - Account
+
+extension Screens {
+    func createAccountViewController(delegate: AccountViewModelDelegate?) -> UIViewController {
+        let viewController = storyboard.instantiateViewController(withIdentifier:
+            "AccountViewController") as! AccountViewController
+        let repository = AuthRepository(context: context)
+        let viewModel = AccountViewModel(repository: repository,
+                                         delegate: delegate)
+        viewController.viewModel = viewModel
+        return viewController
+    }
+}
+
+// MARK: - Add Recipe
+
+extension Screens {
+    func createAddRecipeViewController(delegate: AddRecipeViewModelDelegate?) -> UIViewController {
+        let viewController = storyboard.instantiateViewController(withIdentifier:
+            "AddRecipeViewController") as! AddRecipeViewController
+        let repository = AuthRepository(context: context)
+        let viewModel = AddRecipeViewModel(repository: repository,
+                                           delegate: delegate)
         viewController.viewModel = viewModel
         return viewController
     }

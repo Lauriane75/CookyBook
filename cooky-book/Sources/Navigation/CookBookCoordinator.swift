@@ -48,9 +48,27 @@ extension CookBookCoordinator: CoordinatorProtocol {
         let viewController = screens.createRecipeDetailViewController(delegate: self)
         navigationController.pushViewController(viewController, animated: true)
     }
+
+    private func showAddRecipeView() {
+        let viewController = screens.createAddRecipeViewController(delegate: self)
+        navigationController.pushViewController(viewController, animated: true)
+    }
+
+    private func showAccountView() {
+        let viewController = screens.createAccountViewController(delegate: self)
+        navigationController.pushViewController(viewController, animated: true)
+    }
 }
 
 extension CookBookCoordinator: CookBookViewModelDelegate {
+    func goToAccountScreen() {
+        showAccountView()
+    }
+
+    func goToAddRecipeScreen() {
+        showAddRecipeView()
+    }
+
     func didSelectRecipe() {
         showRecipeDetailView()
     }
@@ -60,4 +78,10 @@ extension CookBookCoordinator: RecipeDetailViewModelDelegate {
     func displayAlert(for type: AlertType) {
         showAlert(for: .errorService)
     }
+}
+
+extension CookBookCoordinator: AccountViewModelDelegate {
+}
+
+extension CookBookCoordinator: AddRecipeViewModelDelegate {
 }
