@@ -10,7 +10,8 @@ import Foundation
 
 protocol CookBookViewModelDelegate: class {
     func didSelectRecipe()
-
+    func goToAccountScreen()
+    func goToAddRecipeScreen()
 }
 
 final class CookBookViewModel {
@@ -64,6 +65,14 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
     func didSelectRecipe(at index: Int) {
         print("open recipe view number \(index)")
         self.delegate?.didSelectRecipe()
+    }
+
+    func didPressAddRecipeButton() {
+        delegate?.goToAddRecipeScreen()
+    }
+
+    func didPressAccount() {
+        delegate?.goToAccountScreen()
     }
 
 }

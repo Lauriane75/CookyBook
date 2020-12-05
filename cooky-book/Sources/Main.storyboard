@@ -202,6 +202,9 @@
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="plus" catalog="system"/>
+                                        <connections>
+                                            <action selector="didPressAddRecipeButton:" destination="3wc-nS-s1q" eventType="touchUpInside" id="S7S-5t-Gu8"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vuu-JK-mco">
                                         <rect key="frame" x="359" y="32.5" width="25" height="25"/>
@@ -211,6 +214,9 @@
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="person.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="didPressAccount:" destination="3wc-nS-s1q" eventType="touchUpInside" id="sJQ-6e-xUD"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vBf-Pd-R9o" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="80" width="414" height="1200"/>
@@ -365,9 +371,8 @@
                     </view>
                     <size key="freeformSize" width="414" height="1200"/>
                     <connections>
-                        <outlet property="AddRecipeButton" destination="fKC-sW-ObN" id="WPf-tx-VMy"/>
-                        <outlet property="accountMenuButton" destination="Vuu-JK-mco" id="GlI-V1-Bh0"/>
-                        <outlet property="addRecipeButton" destination="fKC-sW-ObN" id="UaN-uU-R2f"/>
+                        <outlet property="accountMenuButton" destination="Vuu-JK-mco" id="bZQ-c4-XUo"/>
+                        <outlet property="addRecipeButton" destination="fKC-sW-ObN" id="0rV-d7-f8Q"/>
                         <outlet property="collectionView" destination="UUx-ZS-eDI" id="0DT-M7-yeg"/>
                         <outlet property="friendsLabel" destination="gy2-36-ZPS" id="x8J-QR-zgs"/>
                         <outlet property="nameUserLabel" destination="LaD-dt-W97" id="pEP-vB-897"/>
@@ -651,6 +656,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oSu-8l-vQz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3101" y="5"/>
+        </scene>
+        <!--Account View Controller-->
+        <scene sceneID="qsD-eU-WQj">
+            <objects>
+                <viewController storyboardIdentifier="AccountViewController" id="FTw-7B-vop" customClass="AccountViewController" customModule="cooky_book" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HQg-bn-R4H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXi-qg-bIn">
+                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wXi-qg-bIn" firstAttribute="centerX" secondItem="HQg-bn-R4H" secondAttribute="centerX" id="FtY-fP-uNb"/>
+                            <constraint firstItem="wXi-qg-bIn" firstAttribute="centerY" secondItem="HQg-bn-R4H" secondAttribute="centerY" id="uAr-qv-Caw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="m4P-Zb-vy7"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="wXi-qg-bIn" id="AU9-4b-1bi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mox-D8-liq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3764" y="4"/>
+        </scene>
+        <!--Add Recipe View Controller-->
+        <scene sceneID="7tv-Lt-cEe">
+            <objects>
+                <viewController storyboardIdentifier="AddRecipeViewController" id="FYi-Mx-fnU" customClass="AddRecipeViewController" customModule="cooky_book" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4y6-SR-3Pa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bf0-dx-JvF">
+                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLs-HJ-h8i">
+                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Bf0-dx-JvF" firstAttribute="centerY" secondItem="4y6-SR-3Pa" secondAttribute="centerY" id="2vG-5y-kgC"/>
+                            <constraint firstItem="GLs-HJ-h8i" firstAttribute="centerX" secondItem="4y6-SR-3Pa" secondAttribute="centerX" id="Huj-Q3-TzD"/>
+                            <constraint firstItem="GLs-HJ-h8i" firstAttribute="centerY" secondItem="4y6-SR-3Pa" secondAttribute="centerY" id="cpX-AQ-Alf"/>
+                            <constraint firstItem="Bf0-dx-JvF" firstAttribute="centerX" secondItem="4y6-SR-3Pa" secondAttribute="centerX" id="yvB-46-7IF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yb0-Ar-oBo"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="GLs-HJ-h8i" id="EMd-Of-l0e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R1J-ak-5SQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4557" y="2"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="4yZ-9f-gQ9">
