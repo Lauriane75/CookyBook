@@ -13,7 +13,7 @@ class HomeViewController: UIViewController {
     // MARK: - Outlet
 
     @IBOutlet weak var appNameLabel: UILabel!
-    @IBOutlet weak var heartButton: UIButton!
+    @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var messageButton: UIButton!
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -28,7 +28,6 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         collectionView.dataSource = collectionDataSource
         collectionView.delegate = collectionDataSource
 
@@ -59,14 +58,17 @@ class HomeViewController: UIViewController {
     // MARK: - View actions
 
     @IBAction func didPressMessageButton(_ sender: Any) {
+        viewModel.didPressMessageButton()
     }
-    
-    @IBAction func didPressHeartButton(_ sender: Any) {
+
+    @IBAction func didPressLikesButton(_ sender: Any) {
+        viewModel.didPressLikeButton()
     }
-    
-    // MARK: - Private Files
 
+    @IBAction func didPressLikePostButton(_ sender: Any) {
+        print("like")
 
+    }
 
 }
 

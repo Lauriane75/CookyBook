@@ -9,7 +9,8 @@
 import Foundation
 
 protocol HomeViewModelDelegate: class {
-
+    func goToMessageScreen()
+    func goToLikeScreen()
 }
 
 final class HomeViewModel {
@@ -38,6 +39,14 @@ final class HomeViewModel {
     }
 
     func viewWillAppear() {
+    }
+
+    func didPressMessageButton() {
+        delegate?.goToMessageScreen()
+    }
+
+    func didPressLikeButton() {
+        delegate?.goToLikeScreen()
     }
 
 }

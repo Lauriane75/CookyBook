@@ -24,6 +24,8 @@
 		F6D73FF225795FF1006600F2 /* AuthentificationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D73FF125795FF1006600F2 /* AuthentificationCoordinator.swift */; };
 		F6D73FF625796413006600F2 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D73FF425796412006600F2 /* Utilities.swift */; };
 		F6D73FF725796413006600F2 /* Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D73FF525796412006600F2 /* Custom.swift */; };
+		F6D73FFA257AB24B006600F2 /* LikesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D73FF9257AB24B006600F2 /* LikesViewModel.swift */; };
+		F6D73FFC257AB2A3006600F2 /* LikesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D73FFB257AB2A3006600F2 /* LikesViewController.swift */; };
 		F6F937932566D38D00597303 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F937922566D38D00597303 /* AppDelegate.swift */; };
 		F6F937952566D38D00597303 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F937942566D38D00597303 /* HomeViewController.swift */; };
 		F6F9379B2566D38D00597303 /* cooky_book.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F6F937992566D38D00597303 /* cooky_book.xcdatamodeld */; };
@@ -81,6 +83,8 @@
 		F6D73FF125795FF1006600F2 /* AuthentificationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthentificationCoordinator.swift; sourceTree = "<group>"; };
 		F6D73FF425796412006600F2 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		F6D73FF525796412006600F2 /* Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Custom.swift; sourceTree = "<group>"; };
+		F6D73FF9257AB24B006600F2 /* LikesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesViewModel.swift; sourceTree = "<group>"; };
+		F6D73FFB257AB2A3006600F2 /* LikesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesViewController.swift; sourceTree = "<group>"; };
 		F6F9378F2566D38D00597303 /* cooky-book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cooky-book.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6F937922566D38D00597303 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6F937942566D38D00597303 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -172,8 +176,8 @@
 		F6D73FE8257957C8006600F2 /* Message */ = {
 			isa = PBXGroup;
 			children = (
-				F6D73FE9257957E0006600F2 /* MessageViewModel.swift */,
 				F6D73FEB2579589D006600F2 /* MessageViewController.swift */,
+				F6D73FE9257957E0006600F2 /* MessageViewModel.swift */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -185,6 +189,15 @@
 				F6D73FF525796412006600F2 /* Custom.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		F6D73FF8257AB1DC006600F2 /* Likes */ = {
+			isa = PBXGroup;
+			children = (
+				F6D73FFB257AB2A3006600F2 /* LikesViewController.swift */,
+				F6D73FF9257AB24B006600F2 /* LikesViewModel.swift */,
+			);
+			path = Likes;
 			sourceTree = "<group>";
 		};
 		F6F937862566D38D00597303 = {
@@ -298,6 +311,7 @@
 			children = (
 				F6F937942566D38D00597303 /* HomeViewController.swift */,
 				F6F937D52567CF0200597303 /* HomeViewModel.swift */,
+				F6D73FF8257AB1DC006600F2 /* Likes */,
 				F6D73FE8257957C8006600F2 /* Message */,
 				F6F937D72567CFB800597303 /* Repository */,
 				F6F937D42567CE8400597303 /* Cell */,
@@ -503,6 +517,7 @@
 				F6D73FEC2579589D006600F2 /* MessageViewController.swift in Sources */,
 				F6D73FE1257956A5006600F2 /* SignupViewController.swift in Sources */,
 				F6F937CF2567CDE900597303 /* Alert.swift in Sources */,
+				F6D73FFA257AB24B006600F2 /* LikesViewModel.swift in Sources */,
 				F6F937CA2567CC2800597303 /* HomeCoordinator.swift in Sources */,
 				F6D73FDB25795645006600F2 /* LoginCoordinator.swift in Sources */,
 				F6B0488D25699DB50094EDA2 /* CookBookCollectionViewCell.swift in Sources */,
@@ -510,6 +525,7 @@
 				F6F937D92567CFC800597303 /* AuthRepository.swift in Sources */,
 				F6F937C42567BFF900597303 /* GeneralCoordinator.swift in Sources */,
 				F6D73FDD2579564E006600F2 /* SignUpCoordinator.swift in Sources */,
+				F6D73FFC257AB2A3006600F2 /* LikesViewController.swift in Sources */,
 				F6F937BD2567BF8A00597303 /* HTTPEngine.swift in Sources */,
 				F6FC7549257039B500A763B8 /* IngredientTableViewCell.swift in Sources */,
 				F6F937B92567BF1A00597303 /* Context.swift in Sources */,

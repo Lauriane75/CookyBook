@@ -72,7 +72,4 @@ extension LoginCoordinator: SignupViewModelDelegate {
 
 }
 
-extension LoginCoordinator: HomeViewModelDelegate {
-
-}
 

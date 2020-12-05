@@ -37,5 +37,13 @@ extension SignUpCoordinator: SignupViewModelDelegate {
 }
 
 extension SignUpCoordinator: HomeViewModelDelegate {
+    func goToMessageScreen() {
+
+    }
+
+    func goToLikeScreen() {
+        
+    }
+
 
 }
