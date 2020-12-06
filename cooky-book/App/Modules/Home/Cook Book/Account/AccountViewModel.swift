@@ -16,15 +16,15 @@ final class AccountViewModel {
 
     // MARK: - Properties
 
-    private let repository: AuthRepositoryType
+    private let repository: AuthManagerType
 
     private weak var delegate: AccountViewModelDelegate?
 
 
     // MARK: - Initializer
 
-    init(repository: AuthRepositoryType, delegate: AccountViewModelDelegate?) {
-        self.repository = repository
+    init(Authmanager: AuthManagerType, delegate: AccountViewModelDelegate?) {
+        self.repository = Authmanager
         self.delegate = delegate
     }
 

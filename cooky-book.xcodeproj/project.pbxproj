@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -48,7 +48,7 @@
 		F6F937CC2567CCD400597303 /* CookBookCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F937CB2567CCD400597303 /* CookBookCoordinator.swift */; };
 		F6F937CF2567CDE900597303 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F937CE2567CDE900597303 /* Alert.swift */; };
 		F6F937D62567CF0200597303 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F937D52567CF0200597303 /* HomeViewModel.swift */; };
-		F6F937D92567CFC800597303 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F937D82567CFC800597303 /* AuthRepository.swift */; };
+		F6F937D92567CFC800597303 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F937D82567CFC800597303 /* AuthManager.swift */; };
 		F6F937DF2567D05800597303 /* CookBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F937DE2567D05800597303 /* CookBookViewModel.swift */; };
 		F6F937E12567D0BA00597303 /* CookBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F937E02567D0BA00597303 /* CookBookViewController.swift */; };
 		F6F937E32567D0F100597303 /* CookBookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F937E22567D0F100597303 /* CookBookRepository.swift */; };
@@ -119,7 +119,7 @@
 		F6F937CB2567CCD400597303 /* CookBookCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookBookCoordinator.swift; sourceTree = "<group>"; };
 		F6F937CE2567CDE900597303 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		F6F937D52567CF0200597303 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		F6F937D82567CFC800597303 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		F6F937D82567CFC800597303 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		F6F937DE2567D05800597303 /* CookBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookBookViewModel.swift; sourceTree = "<group>"; };
 		F6F937E02567D0BA00597303 /* CookBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookBookViewController.swift; sourceTree = "<group>"; };
 		F6F937E22567D0F100597303 /* CookBookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookBookRepository.swift; sourceTree = "<group>"; };
@@ -159,7 +159,6 @@
 				013678B7C6E18A3BA05D4642 /* Pods-cooky-book.debug.xcconfig */,
 				E8D44536EE132AF274DF2D64 /* Pods-cooky-book.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -342,10 +341,10 @@
 				F6F937C52567C08800597303 /* CoordinatorProtocol.swift */,
 				F6F937E42567D4D100597303 /* TabBarCoordinator.swift */,
 				F6F937C72567CA8100597303 /* Screens.swift */,
+				F6D73FDA25795645006600F2 /* LoginCoordinator.swift */,
 				F6F937C92567CC2800597303 /* HomeCoordinator.swift */,
 				F6F937CB2567CCD400597303 /* CookBookCoordinator.swift */,
 				F6D73FD825795575006600F2 /* MessageCoordinator.swift */,
-				F6D73FDA25795645006600F2 /* LoginCoordinator.swift */,
 				F6D73FDC2579564E006600F2 /* SignUpCoordinator.swift */,
 				F6D73FF125795FF1006600F2 /* AuthentificationCoordinator.swift */,
 			);
@@ -378,7 +377,7 @@
 				F6F937D52567CF0200597303 /* HomeViewModel.swift */,
 				F6D73FF8257AB1DC006600F2 /* Likes */,
 				F6D73FE8257957C8006600F2 /* Message */,
-				F6F937D72567CFB800597303 /* Repository */,
+				F6F937D72567CFB800597303 /* Managers */,
 				F6F937D42567CE8400597303 /* Cell */,
 				F6F937D32567CE6400597303 /* Model */,
 			);
@@ -402,12 +401,12 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		F6F937D72567CFB800597303 /* Repository */ = {
+		F6F937D72567CFB800597303 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				F6F937D82567CFC800597303 /* AuthRepository.swift */,
+				F6F937D82567CFC800597303 /* AuthManager.swift */,
 			);
-			path = Repository;
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		F6F937DA2567D01400597303 /* Cook Book */ = {
@@ -637,7 +636,7 @@
 				F6D73FDB25795645006600F2 /* LoginCoordinator.swift in Sources */,
 				F6B0488D25699DB50094EDA2 /* CookBookCollectionViewCell.swift in Sources */,
 				F6F937E32567D0F100597303 /* CookBookRepository.swift in Sources */,
-				F6F937D92567CFC800597303 /* AuthRepository.swift in Sources */,
+				F6F937D92567CFC800597303 /* AuthManager.swift in Sources */,
 				F6F937C42567BFF900597303 /* GeneralCoordinator.swift in Sources */,
 				F6D73FDD2579564E006600F2 /* SignUpCoordinator.swift in Sources */,
 				F6D73FFC257AB2A3006600F2 /* LikesViewController.swift in Sources */,

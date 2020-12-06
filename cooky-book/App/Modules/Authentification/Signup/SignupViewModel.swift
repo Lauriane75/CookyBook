@@ -16,15 +16,15 @@ final class SignupViewModel {
 
     // MARK: - Properties
 
-    private let repository: AuthRepositoryType
+    private let Authmanager: AuthManagerType
 
     private weak var delegate: SignupViewModelDelegate?
 
 
     // MARK: - Initializer
 
-    init(repository: AuthRepositoryType, delegate: SignupViewModelDelegate?) {
-        self.repository = repository
+    init(Authmanager: AuthManagerType, delegate: SignupViewModelDelegate?) {
+        self.Authmanager = Authmanager
         self.delegate = delegate
     }
 
@@ -33,21 +33,64 @@ final class SignupViewModel {
     var signupButtonText: ((String) -> Void)?
     var errorLabelText: ((String) -> Void)?
     var errorLabelAlpha: ((Int) -> Void)?
+    var firstNamePlaceHolderText: ((String) -> Void)?
+    var lastNamePlaceHolderText: ((String) -> Void)?
+    var emailPlaceHolderText: ((String) -> Void)?
+    var passwordPlaceHolderText: ((String) -> Void)?
 
     // MARK: - Input
 
     func viewDidLoad() {
         signupButtonText?("Signup")
+        firstNamePlaceHolderText?("First name")
+        lastNamePlaceHolderText?("Last name")
+        emailPlaceHolderText?("Email")
+        passwordPlaceHolderText?("Password")
     }
 
     func viewWillAppear() {
     }
 
     func didPressSignupButton(firstName: String, lastName: String, email: String, password: String) {
-        self.delegate?.goToHomeScreen()
-    }
+        let error = self.validateTheFields(firstName: firstName, lastName: lastName, email: email, password: password)
+        guard error == nil else {
+            errorLabelText?(error!)
+            errorLabelAlpha?(1)
+            return
+        }
+        errorLabelAlpha?(0)
+        register(email, password, firstName, lastName)    }
 
     // MARK: - Private Functions
+
+    private func validateTheFields(firstName: String, lastName: String, email: String, password: String) -> String? {
+        guard firstName != "" && lastName != "" && email != "" && password != "" else {
+            return "Please fill in all fields"
+        }
+        guard Utilities.isPasswordValid(password) == true else {
+            // Password isn't secure enough
+            return "Please make sure your passeword is at least 8 characters and contains a special character and numbers"
+        }
+        return nil
+    }
+
+    fileprivate func register(_ email: String, _ password: String, _ firstName: String, _ lastName: String) {
+        Authmanager.signup(email: email, password: password) { (result, error) in
+            guard error == nil else {
+                self.errorLabelText?("Error creating user")
+                self.errorLabelAlpha?(1)
+                return
+            }
+            self.errorLabelAlpha?(0)
+//            self.Authmanager.saveUser(firstName: firstName, lastName: lastName, email: email, password: password, result: result) { (Error) in
+//                guard Error == nil else {
+//                    self.errorLabelText?("We could't register your account for some reason, please try again")
+//                    return
+//                }
+//            }
+            self.delegate?.goToHomeScreen()
+        }
+    }
 
 }
 

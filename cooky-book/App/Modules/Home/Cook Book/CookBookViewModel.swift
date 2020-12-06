@@ -24,8 +24,8 @@ final class CookBookViewModel {
 
     // MARK: - Initializer
 
-    init(repository: CookBookRepositoryType, delegate: CookBookViewModelDelegate?) {
-        self.repository = repository
+    init(Authmanager: CookBookRepositoryType, delegate: CookBookViewModelDelegate?) {
+        self.repository = Authmanager
         self.delegate = delegate
     }
 

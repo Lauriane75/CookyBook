@@ -68,10 +68,22 @@ class SignupViewController: UIViewController {
 
     private func setUpElements() {
         errorLabel.alpha = 0
-        Custom.styleTextField(firstNameTextField, backgroundColor: UIColor.blue.cgColor)
-        Custom.styleTextField(lastNameTextField, backgroundColor: UIColor.blue.cgColor)
-        Custom.styleTextField(emailTextField, backgroundColor: UIColor.blue.cgColor)
-        Custom.styleTextField(passwordTextField, backgroundColor: UIColor.blue.cgColor)
-        Custom.styleButton(signupButton, backgroundColor: UIColor.green, tintColor: UIColor.white)
+        viewModel.firstNamePlaceHolderText = { [weak self] text in
+            guard let self = self else { return }
+            Custom.styleTextField(self.firstNameTextField, bottomLineColor: UIColor.white.cgColor, placeHolderText: text, placeHolderColor: .gray)
+        }
+        viewModel.lastNamePlaceHolderText = { [weak self] text in
+            guard let self = self else { return }
+            Custom.styleTextField(self.lastNameTextField, bottomLineColor: UIColor.white.cgColor, placeHolderText: text, placeHolderColor: .gray)
+        }
+        viewModel.emailPlaceHolderText = { [weak self] text in
+            guard let self = self else { return }
+            Custom.styleTextField(self.emailTextField, bottomLineColor: UIColor.white.cgColor, placeHolderText: text, placeHolderColor: .gray)
+        }
+        viewModel.passwordPlaceHolderText = { [weak self] text in
+            guard let self = self else { return }
+            Custom.styleTextField(self.passwordTextField, bottomLineColor: UIColor.white.cgColor, placeHolderText: text, placeHolderColor: .gray)
+        }
+        Custom.styleButton(signupButton, backgroundColor: UIColor.orange, tintColor: UIColor.white)
     }
 }

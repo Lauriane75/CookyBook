@@ -17,14 +17,14 @@ final class HomeViewModel {
 
     // MARK: - Properties
 
-    private let repository: AuthRepositoryType
+    private let Authmanager: AuthManagerType
 
     private weak var delegate: HomeViewModelDelegate?
 
     // MARK: - Initializer
 
-    init(repository: AuthRepositoryType, delegate: HomeViewModelDelegate?) {
-        self.repository = repository
+    init(Authmanager: AuthManagerType, delegate: HomeViewModelDelegate?) {
+        self.Authmanager = Authmanager
         self.delegate = delegate
     }
 

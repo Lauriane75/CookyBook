@@ -29,6 +29,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        setUpElements()
         
         bind(to: viewModel!)
         
@@ -73,10 +75,17 @@ class LoginViewController: UIViewController {
 
     fileprivate func setUpElements() {
         errorLabel.alpha = 0
-        Custom.styleTextField(emailTextField, backgroundColor: UIColor.blue.cgColor)
-        Custom.styleTextField(emailTextField, backgroundColor: UIColor.blue.cgColor)
-        Custom.styleButton(signupButton, backgroundColor: UIColor.blue, tintColor: UIColor.white)
-        Custom.styleButton(loginButton, backgroundColor: UIColor.green, tintColor: UIColor.white)
+
+        viewModel.emailTextFieldText = { [weak self] text in
+            guard let self = self else { return }
+            Custom.styleTextField(self.emailTextField, bottomLineColor: UIColor.white.cgColor, placeHolderText: text, placeHolderColor: .white)
+        }
+        viewModel.passwordTextFieldText = { [weak self] text in
+            guard let self = self else { return }
+            Custom.styleTextField(self.passwordTextField, bottomLineColor: UIColor.white.cgColor, placeHolderText: text, placeHolderColor: .white)
+        }
+        Custom.styleButton(signupButton, backgroundColor: UIColor.black, tintColor: UIColor.white)
+        Custom.styleButton(loginButton, backgroundColor: UIColor.orange, tintColor: UIColor.orange)
     }
 
     private func setUpVideo() {
@@ -86,10 +95,13 @@ class LoginViewController: UIViewController {
         videoPlayer = AVPlayer(playerItem: item)
         videoPlayerLayer = AVPlayerLayer(player: videoPlayer!)
         // adjust the size and frame
-        videoPlayerLayer?.frame = CGRect(x: -self.view.frame.size.width * 1.5,
+        videoPlayerLayer?.frame = CGRect(x: 0,
                                          y: 0,
-                                         width: self.view.frame.size.width * 4,
+                                         width: self.view.frame.size.width,
                                          height: self.view.frame.size.height)
+        
+
+
         // add it to the view and play it
         view.layer.insertSublayer(videoPlayerLayer!, at: 0)
         videoPlayer?.playImmediately(atRate: 1)
