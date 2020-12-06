@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVKit
 
 class LoginViewController: UIViewController {
     
@@ -21,6 +22,8 @@ class LoginViewController: UIViewController {
     // MARK: - Properties
     
     var viewModel: LoginViewModel!
+    var videoPlayer: AVPlayer?
+    var videoPlayerLayer: AVPlayerLayer?
     
     // MARK: - View life cycle
     
@@ -30,6 +33,10 @@ class LoginViewController: UIViewController {
         bind(to: viewModel!)
         
         viewModel.viewDidLoad()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        setUpVideo()
     }
     
     // MARK: - Private Functions
@@ -70,6 +77,22 @@ class LoginViewController: UIViewController {
         Custom.styleTextField(emailTextField, backgroundColor: UIColor.blue.cgColor)
         Custom.styleButton(signupButton, backgroundColor: UIColor.blue, tintColor: UIColor.white)
         Custom.styleButton(loginButton, backgroundColor: UIColor.green, tintColor: UIColor.white)
+    }
+
+    private func setUpVideo() {
+        let url = viewModel.setUpVideo()
+        guard url != nil else { return }
+        let item = AVPlayerItem(url: url!)
+        videoPlayer = AVPlayer(playerItem: item)
+        videoPlayerLayer = AVPlayerLayer(player: videoPlayer!)
+        // adjust the size and frame
+        videoPlayerLayer?.frame = CGRect(x: -self.view.frame.size.width * 1.5,
+                                         y: 0,
+                                         width: self.view.frame.size.width * 4,
+                                         height: self.view.frame.size.height)
+        // add it to the view and play it
+        view.layer.insertSublayer(videoPlayerLayer!, at: 0)
+        videoPlayer?.playImmediately(atRate: 1)
     }
     
 }

@@ -53,5 +53,11 @@ final class LoginViewModel {
     func didPressLoginButton(email: String, password: String) {
         self.delegate?.goToHomeScreen()
     }
+
+    func setUpVideo() -> URL? {
+        let bundlePath = Bundle.main.path(forResource: "loginbackground-1", ofType: "mp4")
+        guard bundlePath != nil else { return nil }
+        return URL(fileURLWithPath: bundlePath!)
+    }
 }
 

@@ -13,6 +13,7 @@
 		F6679799257C12DE007A1C56 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6679798257C12DE007A1C56 /* AccountViewController.swift */; };
 		F667979B257C12F0007A1C56 /* AddRecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F667979A257C12F0007A1C56 /* AddRecipeViewModel.swift */; };
 		F667979D257C12FB007A1C56 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F667979C257C12FB007A1C56 /* AccountViewModel.swift */; };
+		F6780FDB257D5E780001DF2D /* loginbackground-1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F6780FDA257D5E580001DF2D /* loginbackground-1.mp4 */; };
 		F6B0488B25699D6D0094EDA2 /* CookBookCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B0488A25699D6D0094EDA2 /* CookBookCollectionDataSource.swift */; };
 		F6B0488D25699DB50094EDA2 /* CookBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B0488C25699DB50094EDA2 /* CookBookCollectionViewCell.swift */; };
 		F6D73FD925795575006600F2 /* MessageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D73FD825795575006600F2 /* MessageCoordinator.swift */; };
@@ -76,6 +77,7 @@
 		F6679798257C12DE007A1C56 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		F667979A257C12F0007A1C56 /* AddRecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeViewModel.swift; sourceTree = "<group>"; };
 		F667979C257C12FB007A1C56 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		F6780FDA257D5E580001DF2D /* loginbackground-1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "loginbackground-1.mp4"; sourceTree = "<group>"; };
 		F6B0488A25699D6D0094EDA2 /* CookBookCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookBookCollectionDataSource.swift; sourceTree = "<group>"; };
 		F6B0488C25699DB50094EDA2 /* CookBookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookBookCollectionViewCell.swift; sourceTree = "<group>"; };
 		F6D73FD825795575006600F2 /* MessageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCoordinator.swift; sourceTree = "<group>"; };
@@ -172,11 +174,20 @@
 			path = AddRecipe;
 			sourceTree = "<group>";
 		};
+		F66DEBEF257D386C00E1E1FF /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				F6780FDA257D5E580001DF2D /* loginbackground-1.mp4 */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
 		F6D73FDE25795674006600F2 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				F6D73FE62579577A006600F2 /* LoginViewController.swift */,
 				F6D73FED25795C1F006600F2 /* LoginViewModel.swift */,
+				F66DEBEF257D386C00E1E1FF /* Video */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -513,6 +524,7 @@
 				F6F937E92567EB0E00597303 /* LaunchScreen.storyboard in Resources */,
 				F6F937EC2567ECFA00597303 /* Assets.xcassets in Resources */,
 				F6F937E72567E8E700597303 /* Main.storyboard in Resources */,
+				F6780FDB257D5E780001DF2D /* loginbackground-1.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
