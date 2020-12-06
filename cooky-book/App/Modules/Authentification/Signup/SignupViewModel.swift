@@ -82,12 +82,12 @@ final class SignupViewModel {
                 return
             }
             self.errorLabelAlpha?(0)
-//            self.Authmanager.saveUser(firstName: firstName, lastName: lastName, email: email, password: password, result: result) { (Error) in
-//                guard Error == nil else {
-//                    self.errorLabelText?("We could't register your account for some reason, please try again")
-//                    return
-//                }
-//            }
+            self.Authmanager.saveUser(firstName: firstName, lastName: lastName, email: email, password: password, result: result) { (Error) in
+                guard Error == nil else {
+                    self.errorLabelText?("We could't register your account for some reason, please try again")
+                    return
+                }
+            }
             self.delegate?.goToHomeScreen()
         }
     }
