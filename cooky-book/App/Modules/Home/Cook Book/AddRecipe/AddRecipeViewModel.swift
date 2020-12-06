@@ -16,15 +16,15 @@ final class AddRecipeViewModel {
 
     // MARK: - Properties
 
-    private let repository: AuthRepositoryType
+    private let repository: AuthManagerType
 
     private weak var delegate: AddRecipeViewModelDelegate?
 
 
     // MARK: - Initializer
 
-    init(repository: AuthRepositoryType, delegate: AddRecipeViewModelDelegate?) {
-        self.repository = repository
+    init(Authmanager: AuthManagerType, delegate: AddRecipeViewModelDelegate?) {
+        self.repository = Authmanager
         self.delegate = delegate
     }
 

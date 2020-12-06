@@ -35,6 +35,11 @@ final class LoginCoordinator {
     // MARK: - Coordinator
 
     func start() {
+        let navBar = navigationController.navigationBar
+        navBar.setBackgroundImage(UIImage(), for: .default)
+        navBar.shadowImage = UIImage()
+        navBar.tintColor = .white
+        navBar.barTintColor = .clear
         presenter.rootViewController = navigationController
         showLoginScreen()
     }
@@ -62,7 +67,7 @@ extension LoginCoordinator: LoginViewModelDelegate {
     func goToHomeScreen() {
         showHomeView()
     }
-
+    
     func goToSignupScreen() {
         showSignupView()
     }

@@ -17,15 +17,15 @@ final class LoginViewModel {
 
     // MARK: - Properties
 
-    private let repository: AuthRepositoryType
+    private let Authmanager: AuthManagerType
 
     private weak var delegate: LoginViewModelDelegate?
 
 
     // MARK: - Initializer
 
-    init(repository: AuthRepositoryType, delegate: LoginViewModelDelegate?) {
-        self.repository = repository
+    init(Authmanager: AuthManagerType, delegate: LoginViewModelDelegate?) {
+        self.Authmanager = Authmanager
         self.delegate = delegate
     }
 
@@ -34,11 +34,15 @@ final class LoginViewModel {
     var loginButtonText: ((String) -> Void)?
     var errorLabelText: ((String) -> Void)?
     var errorLabelAlpha: ((Int) -> Void)?
+    var emailTextFieldText: ((String) -> Void)?
+    var passwordTextFieldText: ((String) -> Void)?
 
     // MARK: - Input
 
     func viewDidLoad() {
         loginButtonText?("Login")
+        emailTextFieldText?("Email")
+        passwordTextFieldText?("Password")
     }
 
     func viewWillAppear() {
@@ -51,13 +55,36 @@ final class LoginViewModel {
     }
 
     func didPressLoginButton(email: String, password: String) {
-        self.delegate?.goToHomeScreen()
+        let error = self.validateTheFields(email: email, password: password)
+        guard error == nil else {
+            self.errorLabelText?(error!)
+            self.errorLabelAlpha?(1)
+            return
+        }
+        Authmanager.logIn(email: email, password: password) { (result, Error) in
+            guard Error == nil else {
+                self.errorLabelText?(Error!.localizedDescription)
+                self.errorLabelAlpha?(1)
+                return
+            }
+            self.delegate?.goToHomeScreen()
+        }
     }
 
     func setUpVideo() -> URL? {
         let bundlePath = Bundle.main.path(forResource: "loginbackground-1", ofType: "mp4")
         guard bundlePath != nil else { return nil }
         return URL(fileURLWithPath: bundlePath!)
+    }
+
+
+    // MARK: - Private Functions
+
+    func validateTheFields(email: String, password: String) -> String? {
+        guard email != "" && password != "" else {
+            return "Please fill in all fields"
+        }
+        return nil
     }
 }
 

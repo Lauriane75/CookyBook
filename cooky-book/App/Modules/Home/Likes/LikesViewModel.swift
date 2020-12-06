@@ -16,15 +16,15 @@ final class LikesViewModel {
 
     // MARK: - Properties
 
-    private let repository: AuthRepositoryType
+    private let Authmanager: AuthManagerType
 
     private weak var delegate: LikesViewModelDelegate?
 
 
     // MARK: - Initializer
 
-    init(repository: AuthRepositoryType, delegate: LikesViewModelDelegate?) {
-        self.repository = repository
+    init(Authmanager: AuthManagerType, delegate: LikesViewModelDelegate?) {
+        self.Authmanager = Authmanager
         self.delegate = delegate
     }
 

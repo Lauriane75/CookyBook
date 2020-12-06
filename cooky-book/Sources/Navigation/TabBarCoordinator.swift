@@ -49,14 +49,20 @@ extension TabBarCoordinator {
 
     func createNavigationController(withTitle title: String, image: UIImage, selectedImage: UIImage) -> UINavigationController {
         let navController = UINavigationController()
-        tabBarController.tabBar.backgroundImage = UIImage()
+
+        let navBar = navController.navigationBar
+        navBar.setBackgroundImage(UIImage(), for: .default)
+        navBar.shadowImage = UIImage()
+        navBar.tintColor = .white
+        navBar.barTintColor = .clear
+
         let tabBar = tabBarController.tabBar
+        tabBar.backgroundImage = UIImage()
         tabBar.unselectedItemTintColor = .white
+        tabBar.barTintColor = .clear
         tabBar.tintColor = .white
         tabBar.backgroundColor = .black
 
-        navController.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navController.navigationBar.tintColor = UIColor.white
         navController.tabBarItem = UITabBarItem(title: title, image: image, selectedImage: selectedImage)
 
         return navController

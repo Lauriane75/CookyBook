@@ -817,7 +817,7 @@
         <scene sceneID="1W6-Da-bzV">
             <objects>
                 <viewController storyboardIdentifier="LoginViewController" id="4pg-fK-07q" customClass="LoginViewController" customModule="cooky_book" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aUe-pU-dbG">
+                    <view key="view" contentMode="scaleAspectFit" id="aUe-pU-dbG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -882,7 +882,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ylh-zL-jGX" firstAttribute="trailing" secondItem="9Sw-8C-yQD" secondAttribute="trailing" constant="20" id="7o4-Js-4s3"/>
                             <constraint firstItem="9Sw-8C-yQD" firstAttribute="height" secondItem="ylh-zL-jGX" secondAttribute="height" multiplier="0.7" id="NVA-q2-hlN"/>

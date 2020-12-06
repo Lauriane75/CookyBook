@@ -16,15 +16,15 @@ final class MessageViewModel {
 
     // MARK: - Properties
 
-    private let repository: AuthRepositoryType
+    private let Authmanager: AuthManagerType
 
     private weak var delegate: MessageViewModelDelegate?
 
 
     // MARK: - Initializer
 
-    init(repository: AuthRepositoryType, delegate: MessageViewModelDelegate?) {
-        self.repository = repository
+    init(Authmanager: AuthManagerType, delegate: MessageViewModelDelegate?) {
+        self.Authmanager = Authmanager
         self.delegate = delegate
     }
 
