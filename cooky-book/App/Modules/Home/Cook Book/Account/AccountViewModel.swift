@@ -9,22 +9,22 @@
 import Foundation
 
 protocol AccountViewModelDelegate: class {
-
+    func goToLoginScreen()
 }
 
 final class AccountViewModel {
 
     // MARK: - Properties
 
-    private let repository: AuthManagerType
+    private let authmanager: AuthManagerType
 
     private weak var delegate: AccountViewModelDelegate?
 
 
     // MARK: - Initializer
 
-    init(Authmanager: AuthManagerType, delegate: AccountViewModelDelegate?) {
-        self.repository = Authmanager
+    init(authmanager: AuthManagerType, delegate: AccountViewModelDelegate?) {
+        self.authmanager = authmanager
         self.delegate = delegate
     }
 
@@ -39,6 +39,15 @@ final class AccountViewModel {
     }
 
     func viewWillAppear() {
+    }
+
+    func didPressSignoutButton() {
+        authmanager.signOut(completion: {
+            print("signout")
+            self.delegate?.goToLoginScreen()
+        }) { (error) in
+            print("error")
+        }
     }
 
     // MARK: - Private Functions

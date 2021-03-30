@@ -41,9 +41,9 @@ extension Screens {
     func createSignupViewController(delegate: SignupViewModelDelegate?) -> UIViewController {
         let viewController = storyboard.instantiateViewController(withIdentifier:
             "SignupViewController") as! SignupViewController
-        let Authmanager = AuthManager(context: context)
-        let viewModel = SignupViewModel(Authmanager: Authmanager,
-                                        delegate: delegate)
+        let authmanager = AuthManager(context: context)
+        let dataBasemanager = DataBaseManager(context: context)
+        let viewModel = SignupViewModel(authmanager: authmanager, dataBasemanager: dataBasemanager, delegate: delegate)
         viewController.viewModel = viewModel
         return viewController
     }
@@ -55,8 +55,8 @@ extension Screens {
     func createHomeViewController(delegate: HomeViewModelDelegate?) -> UIViewController {
         let viewController = storyboard.instantiateViewController(withIdentifier:
             "HomeViewController") as! HomeViewController
-        let Authmanager = AuthManager(context: context)
-        let viewModel = HomeViewModel(Authmanager: Authmanager,
+        let authmanager = AuthManager(context: context)
+        let viewModel = HomeViewModel(authmanager: authmanager,
                                       delegate: delegate)
         viewController.viewModel = viewModel
         return viewController
@@ -69,8 +69,8 @@ extension Screens {
     func createMessageViewController(delegate: MessageViewModelDelegate?) -> UIViewController {
         let viewController = storyboard.instantiateViewController(withIdentifier:
             "MessageViewController") as! MessageViewController
-        let Authmanager = AuthManager(context: context)
-        let viewModel = MessageViewModel(Authmanager: Authmanager,
+        let authmanager = AuthManager(context: context)
+        let viewModel = MessageViewModel(authmanager: authmanager,
                                          delegate: delegate)
         viewController.viewModel = viewModel
         return viewController
@@ -83,8 +83,8 @@ extension Screens {
     func createLikesViewController(delegate: LikesViewModelDelegate?) -> UIViewController {
         let viewController = storyboard.instantiateViewController(withIdentifier:
             "LikesViewController") as! LikesViewController
-        let Authmanager = AuthManager(context: context)
-        let viewModel = LikesViewModel(Authmanager: Authmanager,
+        let authmanager = AuthManager(context: context)
+        let viewModel = LikesViewModel(authmanager: authmanager,
                                        delegate: delegate)
         viewController.viewModel = viewModel
         return viewController
@@ -97,8 +97,8 @@ extension Screens {
     func createCookBookViewController(delegate: CookBookViewModelDelegate?) -> UIViewController {
         let viewController = storyboard.instantiateViewController(withIdentifier:
             "CookBookViewController") as! CookBookViewController
-        let Authmanager = CookBookRepository(context: context)
-        let viewModel = CookBookViewModel(Authmanager: Authmanager,
+        let authmanager = CookBookRepository(context: context)
+        let viewModel = CookBookViewModel(authmanager: authmanager,
                                           delegate: delegate)
         viewController.viewModel = viewModel
         return viewController
@@ -111,8 +111,8 @@ extension Screens {
     func createAccountViewController(delegate: AccountViewModelDelegate?) -> UIViewController {
         let viewController = storyboard.instantiateViewController(withIdentifier:
             "AccountViewController") as! AccountViewController
-        let Authmanager = AuthManager(context: context)
-        let viewModel = AccountViewModel(Authmanager: Authmanager,
+        let authmanager = AuthManager(context: context)
+        let viewModel = AccountViewModel(authmanager: authmanager,
                                          delegate: delegate)
         viewController.viewModel = viewModel
         return viewController
@@ -125,8 +125,8 @@ extension Screens {
     func createAddRecipeViewController(delegate: AddRecipeViewModelDelegate?) -> UIViewController {
         let viewController = storyboard.instantiateViewController(withIdentifier:
             "AddRecipeViewController") as! AddRecipeViewController
-        let Authmanager = AuthManager(context: context)
-        let viewModel = AddRecipeViewModel(Authmanager: Authmanager,
+        let authmanager = AuthManager(context: context)
+        let viewModel = AddRecipeViewModel(authmanager: authmanager,
                                            delegate: delegate)
         viewController.viewModel = viewModel
         return viewController
@@ -139,8 +139,8 @@ extension Screens {
     func createRecipeDetailViewController(delegate: RecipeDetailViewModelDelegate?) -> UIViewController {
         let viewController = storyboard.instantiateViewController(withIdentifier:
             "RecipeDetailViewController") as! RecipeDetailViewController
-        let Authmanager = CookBookRepository(context: context)
-        let viewModel = RecipeDetailViewModel(Authmanager: Authmanager,
+        let authmanager = CookBookRepository(context: context)
+        let viewModel = RecipeDetailViewModel(authmanager: authmanager,
                                               delegate: delegate)
         viewController.viewModel = viewModel
         return viewController

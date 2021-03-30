@@ -16,15 +16,17 @@ final class SignupViewModel {
 
     // MARK: - Properties
 
-    private let Authmanager: AuthManagerType
-
+    private let authmanager: AuthManagerType
+    private let dataBasemanager: DataBaseManagerType
     private weak var delegate: SignupViewModelDelegate?
-
 
     // MARK: - Initializer
 
-    init(Authmanager: AuthManagerType, delegate: SignupViewModelDelegate?) {
-        self.Authmanager = Authmanager
+    init(authmanager: AuthManagerType,
+         dataBasemanager: DataBaseManagerType,
+         delegate: SignupViewModelDelegate?) {
+        self.authmanager = authmanager
+        self.dataBasemanager = dataBasemanager
         self.delegate = delegate
     }
 
@@ -75,14 +77,14 @@ final class SignupViewModel {
     }
 
     fileprivate func register(_ email: String, _ password: String, _ firstName: String, _ lastName: String) {
-        Authmanager.signup(email: email, password: password) { (result, error) in
+        authmanager.signup(email: email, password: password) { (result, error) in
             guard error == nil else {
                 self.errorLabelText?("Error creating user")
                 self.errorLabelAlpha?(1)
                 return
             }
             self.errorLabelAlpha?(0)
-            self.Authmanager.saveUser(firstName: firstName, lastName: lastName, email: email, password: password, result: result) { (Error) in
+            self.dataBasemanager.saveUser(firstName: firstName, lastName: lastName, email: email, password: password, result: result) { (Error) in
                 guard Error == nil else {
                     self.errorLabelText?("We could't register your account for some reason, please try again")
                     return

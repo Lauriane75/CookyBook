@@ -18,6 +18,8 @@
 		F6780FDD257D63AA0001DF2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6780FDC257D63AA0001DF2D /* GoogleService-Info.plist */; };
 		F6B0488B25699D6D0094EDA2 /* CookBookCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B0488A25699D6D0094EDA2 /* CookBookCollectionDataSource.swift */; };
 		F6B0488D25699DB50094EDA2 /* CookBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B0488C25699DB50094EDA2 /* CookBookCollectionViewCell.swift */; };
+		F6BAFF7D257DA203007ACA9D /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BAFF7C257DA203007ACA9D /* DataBaseManager.swift */; };
+		F6BAFF7F257DA982007ACA9D /* AccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BAFF7E257DA982007ACA9D /* AccountCoordinator.swift */; };
 		F6D73FD925795575006600F2 /* MessageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D73FD825795575006600F2 /* MessageCoordinator.swift */; };
 		F6D73FDB25795645006600F2 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D73FDA25795645006600F2 /* LoginCoordinator.swift */; };
 		F6D73FDD2579564E006600F2 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D73FDC2579564E006600F2 /* SignUpCoordinator.swift */; };
@@ -86,6 +88,8 @@
 		F6780FDC257D63AA0001DF2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F6B0488A25699D6D0094EDA2 /* CookBookCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookBookCollectionDataSource.swift; sourceTree = "<group>"; };
 		F6B0488C25699DB50094EDA2 /* CookBookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookBookCollectionViewCell.swift; sourceTree = "<group>"; };
+		F6BAFF7C257DA203007ACA9D /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
+		F6BAFF7E257DA982007ACA9D /* AccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCoordinator.swift; sourceTree = "<group>"; };
 		F6D73FD825795575006600F2 /* MessageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCoordinator.swift; sourceTree = "<group>"; };
 		F6D73FDA25795645006600F2 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		F6D73FDC2579564E006600F2 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
@@ -345,6 +349,7 @@
 				F6F937C92567CC2800597303 /* HomeCoordinator.swift */,
 				F6F937CB2567CCD400597303 /* CookBookCoordinator.swift */,
 				F6D73FD825795575006600F2 /* MessageCoordinator.swift */,
+				F6BAFF7E257DA982007ACA9D /* AccountCoordinator.swift */,
 				F6D73FDC2579564E006600F2 /* SignUpCoordinator.swift */,
 				F6D73FF125795FF1006600F2 /* AuthentificationCoordinator.swift */,
 			);
@@ -405,6 +410,7 @@
 			isa = PBXGroup;
 			children = (
 				F6F937D82567CFC800597303 /* AuthManager.swift */,
+				F6BAFF7C257DA203007ACA9D /* DataBaseManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -514,7 +520,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = "Lauriane Haydari";
 				TargetAttributes = {
 					F6F9378E2566D38D00597303 = {
@@ -623,6 +629,7 @@
 				F6D73FD925795575006600F2 /* MessageCoordinator.swift in Sources */,
 				F6B0488B25699D6D0094EDA2 /* CookBookCollectionDataSource.swift in Sources */,
 				F6F9379B2566D38D00597303 /* cooky_book.xcdatamodeld in Sources */,
+				F6BAFF7D257DA203007ACA9D /* DataBaseManager.swift in Sources */,
 				F6FC7547257038CB00A763B8 /* IngredientTableViewDataSource.swift in Sources */,
 				F6679799257C12DE007A1C56 /* AccountViewController.swift in Sources */,
 				F6D73FF225795FF1006600F2 /* AuthentificationCoordinator.swift in Sources */,
@@ -633,6 +640,7 @@
 				F6F937CF2567CDE900597303 /* Alert.swift in Sources */,
 				F6D73FFA257AB24B006600F2 /* LikesViewModel.swift in Sources */,
 				F6F937CA2567CC2800597303 /* HomeCoordinator.swift in Sources */,
+				F6BAFF7F257DA982007ACA9D /* AccountCoordinator.swift in Sources */,
 				F6D73FDB25795645006600F2 /* LoginCoordinator.swift in Sources */,
 				F6B0488D25699DB50094EDA2 /* CookBookCollectionViewCell.swift in Sources */,
 				F6F937E32567D0F100597303 /* CookBookRepository.swift in Sources */,
@@ -708,6 +716,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -732,6 +741,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -767,6 +777,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -785,6 +796,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

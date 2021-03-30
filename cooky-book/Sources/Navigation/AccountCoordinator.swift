@@ -1,14 +1,14 @@
 //
-//  MessageCoordinator.swift
+//  AccountCoordinator.swift
 //  cooky-book
 //
-//  Created by Lauriane Haydari on 03/12/2020.
+//  Created by Lauriane Haydari on 07/12/2020.
 //  Copyright © 2020 Lauriane Haydari. All rights reserved.
 //
 
 import UIKit
 
-final class MessageCoordinator {
+final class AccountCoordinator {
 
     // MARK: - Properties
 
@@ -28,14 +28,14 @@ final class MessageCoordinator {
 
 // MARK: - CoordinatorProtocol
 
-extension MessageCoordinator: CoordinatorProtocol {
+extension AccountCoordinator: CoordinatorProtocol {
 
     func start() {
         showMessageView()
     }
 
     private func showMessageView() {
-        let viewController = screens.createMessageViewController(delegate: self)
+        let viewController = screens.createAccountViewController(delegate: self)
         navigationController.pushViewController(viewController, animated: false)
     }
 
@@ -43,9 +43,28 @@ extension MessageCoordinator: CoordinatorProtocol {
         let alert = screens.createAlertView(for: type)
         navigationController.visibleViewController?.present(alert, animated: true, completion: nil)
     }
+
+    private func showLoginView() {
+        let viewController = screens.createLoginViewController(delegate: self)
+        navigationController.pushViewController(viewController, animated: false)
+    }
 }
 
-extension MessageCoordinator: MessageViewModelDelegate {
-
+extension AccountCoordinator: AccountViewModelDelegate {
 }
 
+extension AccountCoordinator: LoginViewModelDelegate {
+    func goToSignupScreen() {
+
+    }
+
+    func goToHomeScreen() {
+
+    }
+
+    func goToLoginScreen() {
+        showLoginView()
+    }
+
+
+}

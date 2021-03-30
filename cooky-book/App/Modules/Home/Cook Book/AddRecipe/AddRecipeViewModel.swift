@@ -23,8 +23,8 @@ final class AddRecipeViewModel {
 
     // MARK: - Initializer
 
-    init(Authmanager: AuthManagerType, delegate: AddRecipeViewModelDelegate?) {
-        self.repository = Authmanager
+    init(authmanager: AuthManagerType, delegate: AddRecipeViewModelDelegate?) {
+        self.repository = authmanager
         self.delegate = delegate
     }
 

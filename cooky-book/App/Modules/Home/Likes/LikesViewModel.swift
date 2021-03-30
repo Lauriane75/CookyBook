@@ -20,11 +20,10 @@ final class LikesViewModel {
 
     private weak var delegate: LikesViewModelDelegate?
 
-
     // MARK: - Initializer
 
-    init(Authmanager: AuthManagerType, delegate: LikesViewModelDelegate?) {
-        self.Authmanager = Authmanager
+    init(authmanager: AuthManagerType, delegate: LikesViewModelDelegate?) {
+        self.Authmanager = authmanager
         self.delegate = delegate
     }
 

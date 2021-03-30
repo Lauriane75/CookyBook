@@ -6,15 +6,14 @@
 //  Copyright © 2020 Lauriane Haydari. All rights reserved.
 //
 
-import CoreData
 import Firebase
 import FirebaseAuth
-import FirebaseFirestore
 
 protocol AuthManagerType: class {
     func logIn(email: String, password: String, completion: @escaping((_ authResult: AuthDataResult?, _ error: Error?) -> Void))
     func signup(email: String, password: String, completion: @escaping((_ authResult: AuthDataResult?, _ error: Error?) -> Void))
-    func saveUser(firstName: String, lastName: String, email: String, password: String, result: AuthDataResult?, completion: @escaping((_ error: Error?) -> Void))
+    func getCurrentUser() -> String
+    func signOut(completion: @escaping(() -> Void), failure: @escaping((_ error: String) -> Void))
 }
 
 final class AuthManager: AuthManagerType {
@@ -23,7 +22,6 @@ final class AuthManager: AuthManagerType {
 
     private let token = Token()
     private let context: Context
-    private let dataBase = Firestore.firestore()
 
     // MARK: - Initializer
 
@@ -43,15 +41,17 @@ final class AuthManager: AuthManagerType {
         }
     }
 
-    func saveUser(firstName: String, lastName: String, email: String, password: String, result: AuthDataResult?, completion: @escaping((_ error: Error?) -> Void)) {
-        dataBase.collection("users").addDocument(data: [
-            "first-name": firstName,
-            "last-name": lastName,
-            "uid":  result!.user.uid,
-            "email": email,
-            "password": password
-        ]) { (Error) in
-            completion(Error)
+    func getCurrentUser() -> String {
+        return Auth.auth().currentUser?.email ?? ""
+    }
+
+
+    func signOut(completion: @escaping(() -> Void), failure: @escaping((_ error: String) -> Void)) {
+        do {
+            try Auth.auth().signOut()
+            completion()
+        } catch {
+            failure(error.localizedDescription)
         }
     }
 

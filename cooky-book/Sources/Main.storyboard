@@ -671,10 +671,27 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSQ-Mb-4dg">
+                                <rect key="frame" x="25" y="802" width="364" height="40"/>
+                                <color key="backgroundColor" red="0.93884835030000002" green="0.16803860779999999" blue="0.31850673730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="aAZ-X8-D5n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Signout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressSignoutButton:" destination="FTw-7B-vop" eventType="touchUpInside" id="Swg-Dm-xhm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="m4P-Zb-vy7" firstAttribute="trailing" secondItem="KSQ-Mb-4dg" secondAttribute="trailing" constant="25" id="3Tj-DZ-IyD"/>
                             <constraint firstItem="wXi-qg-bIn" firstAttribute="centerX" secondItem="HQg-bn-R4H" secondAttribute="centerX" id="FtY-fP-uNb"/>
+                            <constraint firstItem="KSQ-Mb-4dg" firstAttribute="leading" secondItem="m4P-Zb-vy7" secondAttribute="leading" constant="25" id="Jy7-g9-fyr"/>
+                            <constraint firstItem="m4P-Zb-vy7" firstAttribute="bottom" secondItem="KSQ-Mb-4dg" secondAttribute="bottom" constant="20" id="rF5-m6-eLD"/>
                             <constraint firstItem="wXi-qg-bIn" firstAttribute="centerY" secondItem="HQg-bn-R4H" secondAttribute="centerY" id="uAr-qv-Caw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="m4P-Zb-vy7"/>
