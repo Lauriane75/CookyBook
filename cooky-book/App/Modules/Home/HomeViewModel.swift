@@ -23,8 +23,8 @@ final class HomeViewModel {
 
     // MARK: - Initializer
 
-    init(Authmanager: AuthManagerType, delegate: HomeViewModelDelegate?) {
-        self.Authmanager = Authmanager
+    init(authmanager: AuthManagerType, delegate: HomeViewModelDelegate?) {
+        self.Authmanager = authmanager
         self.delegate = delegate
     }
 

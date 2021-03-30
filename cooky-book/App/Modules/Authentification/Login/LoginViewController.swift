@@ -99,8 +99,7 @@ class LoginViewController: UIViewController {
                                          y: 0,
                                          width: self.view.frame.size.width,
                                          height: self.view.frame.size.height)
-        
-
+        videoPlayerLayer?.videoGravity = .resizeAspectFill
 
         // add it to the view and play it
         view.layer.insertSublayer(videoPlayerLayer!, at: 0)

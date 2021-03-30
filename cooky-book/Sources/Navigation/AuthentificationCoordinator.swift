@@ -18,8 +18,6 @@ class AuthentificationCoordinator {
 
     private var loginCoordinator: LoginCoordinator?
 
-    let tabBarController = UITabBarController()
-
     private unowned var appDelegate: AppDelegate
 
     // MARK: - Initializer

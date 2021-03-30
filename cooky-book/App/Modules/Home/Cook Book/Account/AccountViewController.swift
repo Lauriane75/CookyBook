@@ -38,7 +38,8 @@ class AccountViewController: UIViewController {
 
     // MARK: - View actions
 
-
-
+    @IBAction func didPressSignoutButton(_ sender: Any) {
+        viewModel.didPressSignoutButton()
+    }
 
 }

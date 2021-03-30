@@ -23,8 +23,8 @@ final class MessageViewModel {
 
     // MARK: - Initializer
 
-    init(Authmanager: AuthManagerType, delegate: MessageViewModelDelegate?) {
-        self.Authmanager = Authmanager
+    init(authmanager: AuthManagerType, delegate: MessageViewModelDelegate?) {
+        self.Authmanager = authmanager
         self.delegate = delegate
     }
 

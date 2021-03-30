@@ -81,7 +81,19 @@ extension CookBookCoordinator: RecipeDetailViewModelDelegate {
 }
 
 extension CookBookCoordinator: AccountViewModelDelegate {
+    func goToLoginScreen() {
+    }
 }
 
 extension CookBookCoordinator: AddRecipeViewModelDelegate {
+}
+
+extension CookBookCoordinator: LoginViewModelDelegate {
+    func goToSignupScreen() {
+
+    }
+
+    func goToHomeScreen() {
+
+    }
 }

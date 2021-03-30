@@ -27,7 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         context = Context(client: client)
 
         coordinator = AuthentificationCoordinator(presenter: window!,
-                                                  context: context, appDelegate: self)
+                                                  context: context,
+                                                  appDelegate: self)
         coordinator?.start()
 
         return true
